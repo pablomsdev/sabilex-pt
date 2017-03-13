@@ -1,0 +1,408 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Supsystic Table\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Marc Bernard <marcissimus@gmail.com>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "An error has occurred"
+msgstr "Es ist ein Fehler aufgetreten"
+
+msgid "Overview"
+msgstr "Überblick"
+
+msgid "Add new table"
+msgstr "Neue Tabelle hinzufügen"
+
+msgid "Tables"
+msgstr "Tabellen"
+
+msgid "License"
+msgstr "Lizenz"
+
+msgid "Invalid range specified."
+msgstr "Ungültiger Bereich angegeben."
+
+msgid "Failed to find diagram %s."
+msgstr "Diagramm %s nicht gefunden."
+
+msgid "Failed to find table %s."
+msgstr "Tabelle %s nicht gefunden."
+
+msgid "Add diagram"
+msgstr "Diagramm hinzufügen"
+
+msgid "The table ID %s not found."
+msgstr "Die Tabelle mit ID %d existiert nicht."
+
+msgid "Export"
+msgstr "Exportieren"
+
+msgid "Export table"
+msgstr "Tabelle exportieren"
+
+msgid "Select file type to export table:"
+msgstr "Dateityp für Export Tabelle angeben:"
+
+msgid "Import error"
+msgstr "Import Fehler"
+
+msgid "Failed to import selected file"
+msgstr "Fehler beim Importieren der ausgewählten Datei"
+
+msgid "Import to the table"
+msgstr "In die Tabelle importieren"
+
+msgid "File extension type"
+msgstr "Dateityp-Erweiterung"
+
+msgid "Import settings"
+msgstr "Import Einstellungen"
+
+msgid "Delimiter"
+msgstr "Trennzeichen"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Failed to import data from the uploaded file"
+msgstr "Fehler beim Importieren der Daten aus der Datei"
+
+msgid "Failed to upload selected file"
+msgstr "Fehler beim Hochladen der ausgewählten Datei"
+
+msgid "Activate License"
+msgstr "Lizenz aktivieren"
+
+msgid "Renew License"
+msgstr "Lizenz erneuern"
+
+msgid "Slider by Supsystic"
+msgstr "Slider by Supsystic"
+
+msgid ""
+"Congratulations! You have successfully installed and activated PRO version of "
+"' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr ""
+"Gratulation! Sie haben die PRO Version des ' ~ environment.getMenu()."
+"getMenuTitle() ~ ' Plugins erfolgreich installiert und aktiviert."
+
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr "Der Premium Support läuft in ' ~ days ~ ' Tagen aus"
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr ""
+"Sie können Ihre PRO Version mit einer abgelaufenen Lizenz nicht aktualisieren"
+
+msgid "Activate"
+msgstr "Aktivieren"
+
+msgid "Save as"
+msgstr "Speichern"
+
+msgid "Diagrams"
+msgstr "Diagramme"
+
+msgid "Get PRO"
+msgstr "PRO Version"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Subject"
+msgstr "Betreff"
+
+msgid "Topic"
+msgstr "Thema"
+
+msgid "Plugin options"
+msgstr "Plugin Optionen"
+
+msgid "Report a bug"
+msgstr "Fehler melden"
+
+msgid "Require a new functionallity"
+msgstr "Neue Funktionalität wünschen"
+
+msgid "Other"
+msgstr "Sonstiges"
+
+msgid "Message"
+msgstr "Nachricht"
+
+msgid "Hello Supsystic Team!"
+msgstr "Hallo Supsystic Team!"
+
+msgid "Can't decode table rows from JSON."
+msgstr "Fehler beim entschlüsseln der Tabellenzeile in JSON."
+
+msgid "Can't decode table meta from JSON."
+msgstr "Fehler beim entschlüsseln der Tabellenmetadaten in JSON."
+
+msgid "Failed to save table meta data: %s"
+msgstr "Fehler beim Speichern der Tabellen Metadaten: %s"
+
+msgid "The table with ID %d not exists."
+msgstr "Die Tabelle mit ID %d existiert nicht."
+
+msgid "Add table"
+msgstr "Neue Tabelle hinzufügen"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Created"
+msgstr "Erstellt am"
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Actions"
+msgstr "Optionen"
+
+msgid "Edit table \"%s\""
+msgstr "Tabelle \"%s\" pflegen"
+
+msgid "Table title"
+msgstr "Tabellentitel"
+
+msgid "Columns"
+msgstr "Spalten"
+
+msgid "Rows"
+msgstr "Zeilen"
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr "Klick, um die Tabelle umzubenennen, und dann [Enter] drücken"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Editor"
+msgstr "Editor"
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Clone"
+msgstr "Kopie"
+
+msgid "Export available only in PRO version."
+msgstr "Exportieren ist nur in PRO Version verfügbar."
+
+msgid "Import available only in PRO version."
+msgstr "Importieren ist nur in PRO Version verfügbar."
+
+msgid "Import"
+msgstr "Importieren"
+
+msgid "Loading your table, please wait..."
+msgstr "Tabelle wird geladen. Bitte warten..."
+
+msgid "Bold"
+msgstr "Fett"
+
+msgid "Italic"
+msgstr "Kursiv"
+
+msgid "Text color"
+msgstr "Textfarbe"
+
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+msgid "Alignment"
+msgstr "Horizontale Ausrichtung"
+
+msgid "Vertical alignment"
+msgstr "Vertikale Ausrichtung"
+
+msgid "Word wrapping"
+msgstr "Zeilenumbruch"
+
+msgid "Create a link"
+msgstr "Verweis einfügen"
+
+msgid "Insert picture"
+msgstr "Bild einfügen"
+
+msgid "Comment"
+msgstr "Kommentar einfügen"
+
+msgid "Table elements"
+msgstr "Tabellenelemente"
+
+msgid "Caption"
+msgstr "Überschrift"
+
+msgid "Header"
+msgstr "Kopfzeile"
+
+msgid "Footer"
+msgstr "Fusszeile"
+
+msgid "Auto index"
+msgstr "Auto Index"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Select language"
+msgstr "Sprache auswählen"
+
+msgid "Overwrite table text"
+msgstr "Tabellentext überschreiben"
+
+msgid "Features"
+msgstr "Eigenschaften"
+
+msgid "Auto width"
+msgstr "Automatische Breite"
+
+msgid "Sorting"
+msgstr "Sortierung"
+
+msgid "Sorting Order"
+msgstr "Sortierfolge"
+
+msgid "Ascending"
+msgstr "Aufsteigend"
+
+msgid "Descending"
+msgstr "Absteigend"
+
+msgid "Sorting Column"
+msgstr "Sortierspalte"
+
+msgid "Number of column to apply sort order."
+msgstr "Anzahl der Spalten für Sortierfolge."
+
+msgid "Pagination"
+msgstr "Seitenumbruch"
+
+msgid "Pagination menu length"
+msgstr "Seitenumbruch Menü Länge"
+
+msgid "Searching"
+msgstr "Suchen"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Table information display field. %s"
+msgstr "Feld für Tabelleninformationen. %s"
+
+msgid "Disallow Indexing"
+msgstr "Indexierung unterbinden"
+
+msgid "Disable indexing table for search bots"
+msgstr "Indexierung der Tabelle für Suchmaschinen abstellen"
+
+msgid "PRO option"
+msgstr "PRO Option"
+
+msgid "Styling"
+msgstr "Stil"
+
+msgid "Borders"
+msgstr "Rahmen"
+
+msgid ""
+"Cell - adds border around all four sides of each cell, Row – adds border only "
+"over and under each row. (i.e. only for the rows)."
+msgstr ""
+"Zelle - Rahmen auf allen vier Seiten hinzufügen, Zeile - Rahmen über und "
+"unter jeder Zeile hinzufügen"
+
+msgid "Cell"
+msgstr "Zelle"
+
+msgid "Row"
+msgstr "Zeile"
+
+msgid "Compact"
+msgstr "Kompakt"
+
+msgid "Reduce the amount of white-space."
+msgstr "Zwischenraum reduzieren."
+
+msgid "Highlighting"
+msgstr "Hervorhebung"
+
+msgid "Row highlighting on mouse over."
+msgstr "Zeile hervorheben, wenn Mauszeige darüber ist."
+
+msgid "Disable wrapping"
+msgstr "Zeilenumbruch deaktivieren"
+
+msgid ""
+"Disable wrapping of content in the table, so all text in the cells is on a "
+"single line."
+msgstr ""
+"Zeilenumbruch innerhalb des Tabelleninhaltes deaktivieren, so dass der "
+"gesamte Text in einer einzigen Zeile erscheint."
+
+msgid "Highlight the order column"
+msgstr "Sortierspalte hervorhaben"
+
+msgid "Row striping"
+msgstr "Abwechselnde Zeilenfarbe"
+
+msgid ""
+"Note that the table may look a little different depending on your theme style."
+msgstr ""
+"Hinweis: Die Tabelle kann je nach Einstellung des Themes unterschiedlich "
+"dargestellt werden. "
+
+msgid "Get PRO version"
+msgstr "PRO Version "
+
+#~ msgid "Choose file to import:"
+#~ msgstr "Datei zum Importieren auswählen:"
+
+#~ msgid "All tables"
+#~ msgstr "Alle Tabellen"
+
+#~ msgid "Ordering"
+#~ msgstr "Sortierung"
+
+#~ msgid "Table information display field."
+#~ msgstr "Feld für Tabelleninformationen"
+
+#~ msgid ""
+#~ "Cell - adds border around all four sides of each cell, Row â adds border "
+#~ "only over and under each row. (i.e. only for the rows)."
+#~ msgstr ""
+#~ "Zellen - Rahmen auf allen vier Seiten, Zeilen - Rahmen nur über und unter "
+#~ "den Zeilen"
+
+#~ msgid ""
+#~ "Note that the table may be minor changes to the style that has your theme."
+#~ msgstr ""
+#~ "Hinweis: Die Tabelle kann geringe Abweichungen zum Stil des Themes haben."

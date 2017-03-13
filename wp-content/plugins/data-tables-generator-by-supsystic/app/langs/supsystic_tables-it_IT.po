@@ -1,0 +1,312 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it_IT\n"
+"X-Generator: Poedit 1.8.4\n"
+
+msgid "An error has occurred"
+msgstr "Si è verificato un errore"
+
+msgid "Overview"
+msgstr "Riepilogo"
+
+msgid "Add new table"
+msgstr "Aggiungi una nuova tabella"
+
+msgid "Tables"
+msgstr "Tabelle"
+
+msgid "License"
+msgstr "Licenza"
+
+msgid "Invalid range specified."
+msgstr "L'area specificata non è valida"
+
+msgid "Failed to find diagram %s."
+msgstr "Impossibile trovare il diagramma %s."
+
+msgid "Failed to find table %s."
+msgstr "Impossibile trovare la tabella %s."
+
+msgid "Add diagram"
+msgstr "Aggiungi un diagramma"
+
+msgid "The table ID %s not found."
+msgstr "Impossibile trovare l'ID della tabella %s."
+
+msgid "Export"
+msgstr "Esportare"
+
+msgid "Export table"
+msgstr "Esportare la tabella"
+
+msgid "Select file type to export table:"
+msgstr "Seleziona il tipo di file per l'esportazione della tabella:"
+
+msgid "Import error"
+msgstr "Errore nell'importazione"
+
+msgid "Failed to import selected file"
+msgstr "Errore nell'importazione del file selezionato"
+
+msgid "Import to the table"
+msgstr "Importa nella tabella"
+
+msgid "Choose file to import:"
+msgstr "Scegli il file da importare:"
+
+msgid "Failed to import data from the uploaded file"
+msgstr "Errore nell'importazione dei dati dal file caricato"
+
+msgid "Failed to upload selected file"
+msgstr "Il trasferimento del file selezionato è fallito"
+
+msgid "Activate License"
+msgstr "Attivare la licenza"
+
+msgid "Renew License"
+msgstr "Rinnovare la licenza"
+
+msgid "Slider by Supsystic"
+msgstr "Slider da Supsystic"
+
+msgid "Congratulations! You have successfully installed and activated PRO version of ' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr "Congratulazioni! Hai installato e attivato con successo la versione PRO del plugin ' ~ environment.getMenu().getMenuTitle() ~ '."
+
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr "Il supporto premium scadrà fra ' ~ days ~ ' giorni"
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr "Impossibile aggiornare la versione PRO con una licenza scaduta"
+
+msgid "Activate"
+msgstr "Attivare"
+
+msgid "Save as"
+msgstr "Salva come"
+
+msgid "Diagrams"
+msgstr "Diagrammi"
+
+msgid "Get PRO"
+msgstr "Diventa PRO"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Website"
+msgstr "Site Web"
+
+msgid "Subject"
+msgstr "Titolo"
+
+msgid "Topic"
+msgstr "Argomento"
+
+msgid "Plugin options"
+msgstr "Opzioni del plugin"
+
+msgid "Report a bug"
+msgstr "Invia una segnalazione di bug"
+
+msgid "Require a new functionallity"
+msgstr "Richiedi una nuova funzionalità"
+
+msgid "Other"
+msgstr "Altro"
+
+msgid "Message"
+msgstr "Messaggio"
+
+msgid "Hello Supsystic Team!"
+msgstr "Buongiorno, Team Supsystic!"
+
+msgid "Failed to save table meta data: %s"
+msgstr "Impossibile salvare i metadati della tabella: %s"
+
+msgid "The table with ID %d not exists."
+msgstr "La tabella con ID %d non esiste."
+
+msgid "Add table"
+msgstr "Aggiungere una tabella"
+
+msgid "All tables"
+msgstr "Tutte le tabelle"
+
+msgid "Title"
+msgstr "Titolo"
+
+msgid "Created"
+msgstr "Creato"
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Actions"
+msgstr "Azioni"
+
+msgid "Edit table \"%s\""
+msgstr "Modificare la tabella \"%s\""
+
+msgid "Table title"
+msgstr "Titolo della tabella"
+
+msgid "Columns"
+msgstr "Colonne"
+
+msgid "Rows"
+msgstr "Linee"
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr "Clicca per rinominare la tabella e premi [Enter]"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "Delete"
+msgstr "Cancella"
+
+msgid "Export available only in PRO version."
+msgstr "L'esportazione è disponibile solo nella versione PRO."
+
+msgid "Import available only in PRO version."
+msgstr "L'importazione è disponibile solo nella versione PRO."
+
+msgid "Import"
+msgstr "Importa"
+
+msgid "Settings"
+msgstr "Impostazioni"
+
+msgid "Editor"
+msgstr "Editor"
+
+msgid "Preview"
+msgstr "Anteprima"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "Loading your table, please wait..."
+msgstr "Caricamento della tabella in corso, attendere..."
+
+msgid "Bold"
+msgstr "Grassetto"
+
+msgid "Italic"
+msgstr "Corsivo"
+
+msgid "Text color"
+msgstr "Colore del testo"
+
+msgid "Background color"
+msgstr "Colore dello sfondo"
+
+msgid "Alignment"
+msgstr "Allineamento"
+
+msgid "Vertical alignment"
+msgstr "Allineamento verticale"
+
+msgid "Create a link"
+msgstr "Creare un link"
+
+msgid "Insert picture"
+msgstr "Inserisci un'immagine"
+
+msgid "Comment"
+msgstr "Commenta"
+
+msgid "Table elements"
+msgstr "Elementi della tabella"
+
+msgid "Caption"
+msgstr "Didascalia"
+
+msgid "Header"
+msgstr "Intestazione"
+
+msgid "Footer"
+msgstr "Piè di pagina"
+
+msgid "Features"
+msgstr "Caratteristiche"
+
+msgid "Auto width"
+msgstr "Larghezza automatica"
+
+msgid "Ordering"
+msgstr "Ordinamento"
+
+msgid "Pagination"
+msgstr "Paginazione"
+
+msgid "Searching"
+msgstr "Ricerca"
+
+msgid "Info"
+msgstr "Informazioni"
+
+msgid "Table information display field."
+msgstr "Campo informativo per la tabella"
+
+msgid "PRO option"
+msgstr "Opzioni PRO"
+
+msgid "Styling"
+msgstr "Stile"
+
+msgid "Borders"
+msgstr "Bordi"
+
+msgid "Cell - adds border around all four sides of each cell, Row â adds border only over and under each row. (i.e. only for the rows)."
+msgstr "Cella - aggiunge il bordo ai quattro lati della cella, Riga - aggiunge i bordi solo sopra e sotto ogni riga (cioè solo per le righe)."
+
+msgid "Cell"
+msgstr "Cella"
+
+msgid "Row"
+msgstr "Riga"
+
+msgid "Compact"
+msgstr "Compatta"
+
+msgid "Reduce the amount of white-space."
+msgstr "Riduca la quantità di spazi."
+
+msgid "Highlighting"
+msgstr "Evidenziato"
+
+msgid "Row highlighting on mouse over."
+msgstr "Evidenziazione della riga al passaggio del mouse"
+
+msgid "Disable wrapping"
+msgstr "Disabilita il ritorno a capo automatico"
+
+msgid "Disable wrapping of content in the table, so all text in the cells is on a single line."
+msgstr "Disabilita il ritorno a capo automatico del contenuto, così che tutto il testo nelle celle sia su una singola riga."
+
+msgid "Highlight the order column"
+msgstr "Evidenzia la colonna di ordinamento"
+
+msgid "Row striping"
+msgstr "Lettura facilitata"
+
+msgid "Note that the table may look a little different depending on your theme style."
+msgstr "Nota: è possibile che il risultato finale sia lleggermente diverso in dipendenza dallo stile del tema."
+
+msgid "Get PRO version"
+msgstr "Acquista la versione PRO"

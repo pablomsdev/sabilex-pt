@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Nazq\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+
+msgid "An error has occurred"
+msgstr "Tapahtui virhe"
+
+msgid "Overview"
+msgstr "Yleiskatsaus"
+
+msgid "Add new table"
+msgstr "Lisää uusi taulukko"
+
+msgid "Tables"
+msgstr "Taulukot"
+
+msgid "Settings"
+msgstr "Asetukset"
+
+msgid "License"
+msgstr "Lisenssi"
+
+msgid "Table title"
+msgstr "Taulukon nimi"
+
+msgid "Columns"
+msgstr "Sarakkeet"
+
+msgid "Rows"
+msgstr "Rivit"
+
+msgid "Invalid range specified."
+msgstr "Epäkelpo alue määritelty."
+
+msgid "Failed to find diagram %s."
+msgstr "Epäonnistuttiin löytämään diagrammi %s."
+
+msgid "Failed to find table %s."
+msgstr "Epäonnistuttiin löytämään taulukko %s."
+
+msgid "Add diagram"
+msgstr "Lisää diagrammi"
+
+msgid "The table ID %s not found."
+msgstr "Taulukko ID %s ei löytynyt."
+
+msgid "Frontend Export"
+msgstr "Julkisen näkymän vienti"
+
+msgid "Allow export table to pdf, csv, xls on frontend"
+msgstr ""
+"Salli taulukon vienti pdf-, csv- tai xls-tiedostomuotoon julkisesta näkymästä"
+
+msgid "Export table"
+msgstr "Vie taulukko"
+
+msgid "Select file type to export table:"
+msgstr "Valitse tiedostotyyppi vietävälle taulukolle:"
+
+msgid "Import error"
+msgstr "Tuontivirhe"
+
+msgid "Failed to import selected file"
+msgstr "Epäonnistuttiin valitun tiedoston tuonnissa"
+
+msgid "Import to the table"
+msgstr "Tuo taulukkoon"
+
+msgid "File extension type"
+msgstr "Tiedosto-laajennuksen tyyppi"
+
+msgid "Import settings"
+msgstr "Tuonti-asetukset"
+
+msgid "Delimiter"
+msgstr "Erotin"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Failed to import data from the uploaded file"
+msgstr "Epäonnistuttiin datan tuomisessa lähetetystä tiedostosta"
+
+msgid "Failed to upload selected file"
+msgstr "Epäonnistuttiin lataamaan valittu tiedosto"
+
+msgid "Activate License"
+msgstr "Aktivoi lisenssi"
+
+msgid "Renew License"
+msgstr "Uudista lisenssi"
+
+msgid "Slider by Supsystic"
+msgstr "Slideri Supsysticiltä"
+
+msgid ""
+"Congratulations! You have successfully installed and activated PRO version "
+"of ' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr ""
+"Onnittelut! Olet asentanut ja aktivoinut onnistuneesti PRO-version ' ~ "
+"environment.getMenu().getMenuTitle() ~ ' -lisäosasta."
+
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr "Sinun premium-tukesi on päättynyt  ' ~ days ~ ' päivässä"
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr "Et pysty päivittämään pro-versiotasi erääntyneellä lisenssillä"
+
+msgid "Activate"
+msgstr "Aktivoi"
+
+msgid "Save"
+msgstr "Tallenna"
+
+msgid "Add editable field"
+msgstr "Lisää muokattavissa oleva -kenttä"
+
+msgid "Save as"
+msgstr "Tallenna nimellä"
+
+msgid "Diagrams"
+msgstr "Diagrammit"
+
+msgid "Get PRO"
+msgstr "Hanki PRO-versio"
+
+msgid "Your message successfully send. We contact you soon."
+msgstr "Viestisi lähetettiin onnistuneesti. Olemme pian yhteydessä sinuun."
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Email"
+msgstr "Sähköposti"
+
+msgid "Website"
+msgstr "Verkkosivu"
+
+msgid "Subject"
+msgstr "Otsikko"
+
+msgid "Topic"
+msgstr "Aihe"
+
+msgid "Plugin options"
+msgstr "Lisäosan asetukset"
+
+msgid "Report a bug"
+msgstr "Ilmoita bugista"
+
+msgid "Require a new functionallity"
+msgstr "Pyydä uutta toimintoa"
+
+msgid "Other"
+msgstr "Muu"
+
+msgid "Message"
+msgstr "Viesti"
+
+# Note that the message should be written in english.
+msgid "Hello Supsystic Team!"
+msgstr "Hello Supsystic Team! (kääntäjän huomio: kirjoita englanniksi)"
+
+msgid ""
+"Some errors occurred while sending mail please send your message trough this "
+"contact form:"
+msgstr ""
+"Virheitä tapahtui lähettäessä viestiä, lähetä viestisi käyttämällä tätä "
+"yhteydenottolomaketta:"
+
+msgid "PRO option"
+msgstr "PRO-version asetus"
+
+msgid "Can't decode table rows from JSON."
+msgstr "Ei pystytä purkamaan taulukon rivejä JSON:sta"
+
+msgid "Can't decode table meta from JSON."
+msgstr "Ei pystytä purkamaan taulukon metatietoja JSON:sta"
+
+msgid "Failed to save table meta data: %s"
+msgstr "Epäonnistuttiin tallentamaan taulukon metadata: %s"
+
+msgid "The table with ID %d not exists."
+msgstr "Taulukkoa ID %d ei ole olemassa."
+
+msgid "Add table"
+msgstr "Lisää taulukko"
+
+msgid "Title"
+msgstr "Nimi"
+
+msgid "Created"
+msgstr "Luotu"
+
+msgid "Shortcode"
+msgstr "Lyhytkoodi"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Actions"
+msgstr "Toiminnot"
+
+msgid "Edit table \"%s\""
+msgstr "Muokkaa taulukkoa \"%s\""
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr "Klikkaa muuttaaksesi taulukon nimi ja paina [Enter]"
+
+msgid "Editor"
+msgstr "Muokkain"
+
+msgid "Preview"
+msgstr "Esikatselu"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "Delete"
+msgstr "Poista"
+
+msgid "Clone"
+msgstr "Kloonaa"
+
+msgid "Export available only in PRO version."
+msgstr "Vienti on mahdollista vain PRO-versiossa."
+
+msgid "Export"
+msgstr "Vie"
+
+msgid "Import available only in PRO version."
+msgstr "Tuonti on mahdollista vain PRO-versiossa."
+
+msgid "Import"
+msgstr "Tuo"
+
+msgid "Loading your table, please wait..."
+msgstr "Ladataan taulukkoasi, ole hyvä ja odota..."
+
+msgid "Bold"
+msgstr "Lihavoi"
+
+msgid "Italic"
+msgstr "Kursivoitu"
+
+msgid "Text color"
+msgstr "Tekstin väri"
+
+msgid "Background color"
+msgstr "Taustan väri"
+
+msgid "Alignment"
+msgstr "Tasaus"
+
+msgid "Vertical alignment"
+msgstr "Vertikaalinen tasaus"
+
+msgid "Word wrapping"
+msgstr "Sanojen kääriminen"
+
+msgid "Create a link"
+msgstr "Luo linkki"
+
+msgid "Insert picture"
+msgstr "Lisää kuva"
+
+msgid "Comment"
+msgstr "Kommentti"
+
+msgid "Table elements"
+msgstr "Taulukon ominaisuudet"
+
+msgid "Caption"
+msgstr "Otsikko"
+
+msgid "Header"
+msgstr "Ylätunniste"
+
+msgid "Footer"
+msgstr "Alatunniste"
+
+msgid "Auto index"
+msgstr "Automaattinen indeksointi"
+
+msgid "Language"
+msgstr "Kieli"
+
+msgid "Select language"
+msgstr "Valitse kieli"
+
+msgid "Overwrite table text"
+msgstr "Taulukon tekstin päällekirjoitus"
+
+msgid "Features"
+msgstr "Toiminnot"
+
+msgid "Auto width"
+msgstr "Automaattinen leveys"
+
+msgid "Sorting"
+msgstr "Lajittelu"
+
+msgid "Sorting Order"
+msgstr "Lajittelu järjestys"
+
+msgid "Ascending"
+msgstr "Nouseva"
+
+msgid "Descending"
+msgstr "Laskeva"
+
+msgid "Sorting Column"
+msgstr "Lajitteleva sarake"
+
+msgid "Number of column to apply sort order."
+msgstr "Sarakkeen numero, jonka mukaan lajitellaan."
+
+msgid "Pagination"
+msgstr "Sivutus"
+
+msgid "Pagination menu length"
+msgstr "Sivutus-valikon pituus"
+
+msgid "Searching"
+msgstr "Etsitään"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Table information display field. %s"
+msgstr "Taulukon tietojen näyttökenttä"
+
+msgid "Disallow Indexing"
+msgstr "Älä salli indeksointia"
+
+msgid "Disable indexing table for search bots"
+msgstr "Poista taulukon indeksointi käytöstä hakuboteilta"
+
+msgid "Styling"
+msgstr "Tyylit"
+
+msgid "Borders"
+msgstr "Reunat"
+
+msgid ""
+"Cell - adds border around all four sides of each cell, Row – adds border "
+"only over and under each row. (i.e. only for the rows)."
+msgstr ""
+"Solu - lisää jokaisen solun kaikille neljälle sivulle reunan, Rivi - lisää "
+"reunan vain jokaisen rivin ylä- ja alapuolelle. (ts. vain riveille)."
+
+msgid "Cell"
+msgstr "Solu"
+
+msgid "Row"
+msgstr "Rivi"
+
+msgid "Compact"
+msgstr "Tiivistä"
+
+msgid "Reduce the amount of white-space."
+msgstr "Supistaa tyhjän tilan määrää."
+
+msgid "Highlighting"
+msgstr "Korostaminen"
+
+msgid "Row highlighting on mouse over."
+msgstr "Rivin korostaminen hiiren ollessa päällä."
+
+msgid "Disable wrapping"
+msgstr "Poista kääriminen pois käytöstä"
+
+msgid ""
+"Disable wrapping of content in the table, so all text in the cells is on a "
+"single line."
+msgstr ""
+"Poista sisällön kääriminen taulukossa käytöstä, jotta kaikki teksti solussa "
+"on yhdellä rivillä."
+
+msgid "Highlight the order column"
+msgstr "Korosta lajittelevaa saraketta"
+
+msgid "Row striping"
+msgstr "Rivien väritys"
+
+msgid ""
+"Note that the table may look a little different depending on your theme "
+"style."
+msgstr ""
+"Huomaa, että taulukko voi näyttää hieman erilaiselta riippuen teemasi "
+"tyylistä."
+
+msgid "Get PRO version"
+msgstr "Hanki PRO-versio"
+
+msgid "Editable fields"
+msgstr "Muokattavissa olevat kentät"
+
+msgid "PRO version"
+msgstr "Pro-versio"
+
+msgid ""
+"Please be advised that this option is available only in %s. You can %s today "
+"and get this and other PRO option for your tables!"
+msgstr ""
+"Huomaathan, että tämä asetus on saatavilla vain %s:ssa. Voit %s tänään ja "
+"saat tämän, sekä muita PRO-version asetuksia, käyttöön taulukkoihisi!"
+
+msgid "Insert url"
+msgstr "Lisää url-osoite"
+
+msgid "Link Text"
+msgstr "Linkin teksti"
+
+msgid "Open link in a new tab"
+msgstr "Avaa linkki uudessa välilehdessä"

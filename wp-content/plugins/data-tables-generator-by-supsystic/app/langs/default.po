@@ -1,0 +1,438 @@
+msgid "An error has occurred"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Add new table"
+msgstr ""
+
+msgid "Tables"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "License"
+msgstr ""
+
+msgid "Table title"
+msgstr ""
+
+msgid "Columns"
+msgstr ""
+
+msgid "Rows"
+msgstr ""
+
+msgid "Invalid range specified."
+msgstr ""
+
+msgid "Failed to find diagram %s."
+msgstr ""
+
+msgid "Failed to find table %s."
+msgstr ""
+
+msgid "Add diagram"
+msgstr ""
+
+msgid "The table ID %s not found."
+msgstr ""
+
+msgid "Frontend Export"
+msgstr ""
+
+msgid "Allow export table to pdf, csv, xls on frontend"
+msgstr ""
+
+msgid "Export Logo"
+msgstr ""
+
+msgid "Automticaly appends selected logo for output pdf or printing"
+msgstr ""
+
+msgid "Logo Position"
+msgstr ""
+
+msgid "Above table"
+msgstr ""
+
+msgid "Below table"
+msgstr ""
+
+msgid "Logo Alignment"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Export table"
+msgstr ""
+
+msgid "Select file type to export table:"
+msgstr ""
+
+msgid "Import error"
+msgstr ""
+
+msgid "Failed to import selected file"
+msgstr ""
+
+msgid "Import to the table"
+msgstr ""
+
+msgid "File extension type"
+msgstr ""
+
+msgid "Import settings"
+msgstr ""
+
+msgid "Delimiter"
+msgstr ""
+
+msgid "Url"
+msgstr ""
+
+msgid "Failed to import data from the uploaded file"
+msgstr ""
+
+msgid "Failed to upload selected file"
+msgstr ""
+
+msgid "Activate License"
+msgstr ""
+
+msgid "Renew License"
+msgstr ""
+
+msgid "Slider by Supsystic"
+msgstr ""
+
+msgid "Congratulations! You have successfully installed and activated PRO version of ' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr ""
+
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr ""
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr ""
+
+msgid "Activate"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Add editable field"
+msgstr ""
+
+msgid "Save as"
+msgstr ""
+
+msgid "Diagrams"
+msgstr ""
+
+msgid "Get PRO"
+msgstr ""
+
+msgid "Your message successfully send. We contact you soon."
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Website"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Topic"
+msgstr ""
+
+msgid "Plugin options"
+msgstr ""
+
+msgid "Report a bug"
+msgstr ""
+
+msgid "Require a new functionallity"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Hello Supsystic Team!"
+msgstr ""
+
+msgid "Some errors occurred while sending mail please send your message trough this contact form:"
+msgstr ""
+
+msgid "PRO option"
+msgstr ""
+
+msgid "Can\'t decode table rows from JSON."
+msgstr ""
+
+msgid "Can\'t decode table meta from JSON."
+msgstr ""
+
+msgid "Failed to save table meta data: %s"
+msgstr ""
+
+msgid "The table with ID %d not exists."
+msgstr ""
+
+msgid "Add table"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Shortcode"
+msgstr ""
+
+msgid "PHP"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Edit table \"%s\""
+msgstr ""
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr ""
+
+msgid "Editor"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "CSS"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Clone"
+msgstr ""
+
+msgid "Export available only in PRO version."
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Import available only in PRO version."
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Loading your table, please wait..."
+msgstr ""
+
+msgid "Bold"
+msgstr ""
+
+msgid "Italic"
+msgstr ""
+
+msgid "Text color"
+msgstr ""
+
+msgid "Background color"
+msgstr ""
+
+msgid "Alignment"
+msgstr ""
+
+msgid "Vertical alignment"
+msgstr ""
+
+msgid "Word wrapping"
+msgstr ""
+
+msgid "Create a link"
+msgstr ""
+
+msgid "Insert picture"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Formats"
+msgstr ""
+
+msgid "Table elements"
+msgstr ""
+
+msgid "Caption"
+msgstr ""
+
+msgid "Header"
+msgstr ""
+
+msgid "Footer"
+msgstr ""
+
+msgid "Auto index"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Select language"
+msgstr ""
+
+msgid "Overwrite table text"
+msgstr ""
+
+msgid "Features"
+msgstr ""
+
+msgid "Auto width"
+msgstr ""
+
+msgid "Sorting"
+msgstr ""
+
+msgid "Sorting Order"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Descending"
+msgstr ""
+
+msgid "Sorting Column"
+msgstr ""
+
+msgid "Number of column to apply sort order."
+msgstr ""
+
+msgid "Pagination"
+msgstr ""
+
+msgid "Pagination menu length"
+msgstr ""
+
+msgid "Searching"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Table information display field. %s"
+msgstr ""
+
+msgid "Disallow Indexing"
+msgstr ""
+
+msgid "Disable indexing table for search bots"
+msgstr ""
+
+msgid "Editor settings"
+msgstr ""
+
+msgid "Currency Format"
+msgstr ""
+
+msgid "Set output format for currencies e.g ($ 1,000.00, € 1.00)"
+msgstr ""
+
+msgid "Percent Format"
+msgstr ""
+
+msgid "Set output format for percent numbers e.g (0.00%, 1%)"
+msgstr ""
+
+msgid "Date Format"
+msgstr ""
+
+msgid "Set output format for date e.g (YYYY-MM-DD, MM.DD.YYYY)"
+msgstr ""
+
+msgid "Styling"
+msgstr ""
+
+msgid "Borders"
+msgstr ""
+
+msgid "Cell - adds border around all four sides of each cell, Row – adds border only over and under each row. (i.e. only for the rows)."
+msgstr ""
+
+msgid "Cell"
+msgstr ""
+
+msgid "Row"
+msgstr ""
+
+msgid "Compact"
+msgstr ""
+
+msgid "Reduce the amount of white-space."
+msgstr ""
+
+msgid "Highlighting"
+msgstr ""
+
+msgid "Row highlighting on mouse over."
+msgstr ""
+
+msgid "Disable wrapping"
+msgstr ""
+
+msgid "Disable wrapping of content in the table, so all text in the cells is on a single line."
+msgstr ""
+
+msgid "Highlight the order column"
+msgstr ""
+
+msgid "Row striping"
+msgstr ""
+
+msgid "Note that the table may look a little different depending on your theme style."
+msgstr ""
+
+msgid "Get PRO version"
+msgstr ""
+
+msgid "Editable fields"
+msgstr ""
+
+msgid "PRO version"
+msgstr ""
+
+msgid "Please be advised that this option is available only in %s. You can %s today and get this and other PRO option for your tables!"
+msgstr ""
+
+msgid "Insert url"
+msgstr ""
+
+msgid "Link Text"
+msgstr ""
+
+msgid "Open link in a new tab"
+msgstr ""
+

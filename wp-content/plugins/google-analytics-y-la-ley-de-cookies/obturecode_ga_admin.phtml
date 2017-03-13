@@ -1,0 +1,119 @@
+
+<style type="text/css">
+    .admin_perena_cover .bloque_izq {
+        margin: 20px;
+        float:left;
+        position: relative;
+        width:100%;
+        min-width: 500px;
+    }
+    .admin_perena_cover .bloque_izq input[type="radio"]{
+        width: 15px;
+    }
+    .admin_perena_cover .bloque_izq select,.admin_perena_cover .bloque_izq input,.admin_perena_cover .bloque_izq textarea{
+        width:300px;
+    }
+    .admin_perena_cover .bloque_izq textarea{
+        height: 100px;
+    }
+    .admin_perena_cover .bloque_der {
+        margin: 20px;
+        float:left;
+        position: relative;
+        width:380px;
+    }
+    .admin_perena_cover label{
+        width:100px;
+        display: inline-block;
+    }
+    .titulo_flotante{
+        position: absolute;
+        width:120px;
+        height:30px;
+        background: #0A4926;
+        top:30px;
+        opacity: 0.8;
+        color:white;
+        font-size: 13px;
+        text-align: center;
+    }
+    .titulo_flotante_big{
+        position: absolute;
+        height:60px;
+        width:360px;
+        top:60px;
+        color:white;
+        font-size: 20px;
+        text-align: center;
+        opacity: 0.8;
+        background: #0A4926;
+
+    }
+    .titulo_flotante div{
+        margin: 8px auto;
+        display: inline-block;
+    }
+    .titulo_flotante_big div{
+        margin: 20px auto;
+        display: inline-block;
+    }
+
+</style>
+<div class="admin_perena_cover">
+    <form method="post" action="options.php"> 
+        <?php settings_fields( 'obt_cookies' );
+            $texto = get_option('obtga_texto',OBTURECODE_GA_TEXT);
+            $titulo = get_option('obtga_titulo',OBTURECODE_GA_TITLE);
+            $acepto = get_option('obtga_acepto',OBTURECODE_GA_ACCEPT);
+            $tipo = get_option('obtga_intrusive_mode')
+         ?>
+    <div class="bloque_izq">
+        <h1>Ajustes del plugin "<?=OBTURECODE_GA_NAME?>"</h1>
+        <h2>Configuración de analitycs</h2>
+        <div><label>ID Analitycs</label><input type="text" name="obtga_idanalitycs" value="<?=get_option('obtga_idanalitycs')?>"/></div>
+        <?php if(function_exists('pll_register_string')):?>
+            <p><div><label>Título</label><?php pll_e(OBTURECODE_GA_TITLE);?></div></p>
+            <p><div><label>Texto</label><?php pll_e(OBTURECODE_GA_TEXT);?></div></p>
+            <p><div><label>Aceptar</label><?php pll_e(OBTURECODE_GA_ACCEPT);?></div></p>
+            <p>Para configurar los Textos que aparecen en este plugin vete a la configuración de cadenas del plugin polylang</p>
+        <?php else: ?>
+            <div><label>Título</label><input type="text" name="obtga_titulo" value="<?=$titulo?>"/></div>
+            <div><label>Texto</label><textarea type="text" name="obtga_texto"><?=$texto?></textarea></div>
+            <div><label>Boton Aceptar</label><textarea type="text" name="obtga_acepto"><?=$acepto?></textarea></div>
+
+            <p>Este plugin soporta idiomas mediante el plugin polylang. Si instalas Polylang recuerda desactivar y activar este plugin para que veas los cambios</p>
+        <?php endif; ?>
+        <hr />
+        <h2>Tipo de aviso</h2>
+        <div class="radio">
+            <div style="float:left">
+                <label>Estilo de aviso</label>
+            </div>
+            <div style="float:left; width:300px">
+                <input type="radio" name="obtga_intrusive_mode" value="0" <?php echo($tipo==false?"checked='checked'":''); ?>>No Intrusivo<br />
+                <input type="radio" name="obtga_intrusive_mode" value="1" <?php echo($tipo==true?"checked='checked'":''); ?>>Intrusivo
+            </div>
+            <div style="clear:both">&nbsp;</div>
+            <p>El estilo de aviso <strong>intrusivo</strong> mostrará un aviso modal (hasta que no se acepte no dejará navegar)</p>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="bloque_izq">
+    <hr />
+    <h2>Personaliza el aviso</h2>
+    <p>Puedes personalizar el estilo del aviso sobrescribiendo en tu css los siguientes elementos:</p>
+    <ul>
+        <li>#obt_ga_banner</li>
+        <li>#obt_ga_contenido h2</li>
+        <li>#obt_ga_contenido p</li>
+        <li>#obt_ga_contenido a</li>
+        <li>#obt_ga_contenido</li>
+        <li>#obt_ga_boton</li>
+    </ul>
+    </div>
+    <hr />
+    
+    <div style="clear:both"></div>
+    <?php submit_button(); ?>
+</fom>
+</div>

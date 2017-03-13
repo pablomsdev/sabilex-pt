@@ -1,0 +1,366 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"X-Generator: Poedit 1.8.6\n"
+
+msgid "An error has occurred"
+msgstr "Er is een fout opgetreden"
+
+msgid "Overview"
+msgstr "Overzicht"
+
+msgid "Add new table"
+msgstr "Voeg nieuwe tabel toe"
+
+msgid "Tables"
+msgstr "Tabellen"
+
+msgid "License"
+msgstr "Licentie"
+
+msgid "Invalid range specified."
+msgstr "Ongeldig bereik opgegeven."
+
+msgid "Failed to find diagram %s."
+msgstr "Kan diagram %s niet vinden."
+
+msgid "Failed to find table %s."
+msgstr "Vinden van tabel %s mislukt."
+
+msgid "Add diagram"
+msgstr "Nieuwe Dragram"
+
+msgid "The table ID %s not found."
+msgstr "Tabel ID %s is niet gevonden."
+
+msgid "Export"
+msgstr "Exporteren"
+
+msgid "Export table"
+msgstr "Exporteer Tabel"
+
+msgid "Select file type to export table:"
+msgstr "Selecteer bestandstype om tabel te exporteren:"
+
+msgid "Import error"
+msgstr "Fout bij importeren"
+
+msgid "Failed to import selected file"
+msgstr "Importeren van geselecteerde bestand is mislukt"
+
+msgid "Import to the table"
+msgstr "Importeren naar tabel"
+
+msgid "File extension type"
+msgstr "Bestand extensie"
+
+msgid "Import settings"
+msgstr "Import instellingen"
+
+msgid "Delimiter"
+msgstr "Delimiter"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Failed to import data from the uploaded file"
+msgstr "Importeren van geuploade bestand is mislukt"
+
+msgid "Failed to upload selected file"
+msgstr "Uploaden van geselecteerde bestand is mislukt"
+
+msgid "Activate License"
+msgstr "Activeer Licentie"
+
+msgid "Renew License"
+msgstr "Verleng Licentie"
+
+msgid "Slider by Supsystic"
+msgstr "Slider by Supsystic"
+
+msgid "Congratulations! You have successfully installed and activated PRO version of ' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr "Gefeliciteerd! Het installeren en activeren van de PRO versie van ' ~ environment.getMenu().getMenuTitle() ~ ' plugin is gelukt. "
+
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr "Uw premium ondersteuning verloopt over ' ~ dagen ~ ' dagen"
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr "U kunt uw pro versie niet updaten wanneer de licentie is verlopen"
+
+msgid "Activate"
+msgstr "Activeer"
+
+msgid "Save as"
+msgstr "Opslaan als"
+
+msgid "Diagrams"
+msgstr "Diagrammen"
+
+msgid "Get PRO"
+msgstr "Neem PRO"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Subject"
+msgstr "Onderwerp"
+
+msgid "Topic"
+msgstr "Topic"
+
+msgid "Plugin options"
+msgstr "Plugin instellingen"
+
+msgid "Report a bug"
+msgstr "Meld een fout"
+
+msgid "Require a new functionallity"
+msgstr "Ik heb een nieuwe functie nodig"
+
+msgid "Other"
+msgstr "Anders"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Hello Supsystic Team!"
+msgstr "Hallo Supsystic Team!"
+
+msgid "Can't decode table rows from JSON."
+msgstr "Decoderen van tabel rijen van JSON mislukt"
+
+msgid "Can't decode table meta from JSON."
+msgstr "Decoderen van tabel gegevens van JSON mislukt"
+
+msgid "Failed to save table meta data: %s"
+msgstr "Opslaan van tabel gegevens: %s mislukt"
+
+msgid "The table with ID %d not exists."
+msgstr "Tabel met ID %d bestaat niet."
+
+msgid "Add table"
+msgstr "Nieuwe tabel"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Created"
+msgstr "Aangemaakt"
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Actions"
+msgstr "Acties"
+
+msgid "Edit table \"%s\""
+msgstr "Bewerk tabel \"%s\""
+
+msgid "Table title"
+msgstr "Tabel titel"
+
+msgid "Columns"
+msgstr "Kolommen"
+
+msgid "Rows"
+msgstr "Rijen"
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr "Om te hernoemen klik en druk op [Enter]"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Editor"
+msgstr "Bewerker"
+
+msgid "Preview"
+msgstr "Weergeven"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "Clone"
+msgstr "Kopiëren"
+
+msgid "Export available only in PRO version."
+msgstr "Exporteren is alleen besschikbaar in PRO versie."
+
+msgid "Import available only in PRO version."
+msgstr "Importeren is alleen besschikbaar in PRO versie."
+
+msgid "Import"
+msgstr "Importeren"
+
+msgid "Loading your table, please wait..."
+msgstr "Bezig met laden van tabel, een ogenblik..."
+
+msgid "Bold"
+msgstr "Vetgedrukt"
+
+msgid "Italic"
+msgstr "Schuigedruky"
+
+msgid "Text color"
+msgstr "Tekstkleur"
+
+msgid "Background color"
+msgstr "Achtergrondkleur"
+
+msgid "Alignment"
+msgstr "Uitlijning"
+
+msgid "Vertical alignment"
+msgstr "Verticaal uitlijnen"
+
+msgid "Word wrapping"
+msgstr "Woord wrappen"
+
+msgid "Create a link"
+msgstr "Maak een link"
+
+msgid "Insert picture"
+msgstr "Afbeelding invoegen"
+
+msgid "Comment"
+msgstr "Opmerking"
+
+msgid "Table elements"
+msgstr "Tabel elementen"
+
+msgid "Caption"
+msgstr "Onderschrift"
+
+msgid "Header"
+msgstr "Kopschrift"
+
+msgid "Footer"
+msgstr "Voetschrift"
+
+msgid "Auto index"
+msgstr "Automatische indexering"
+
+msgid "Language"
+msgstr "Taal"
+
+msgid "Select language"
+msgstr "Selecteer taal"
+
+msgid "Overwrite table text"
+msgstr "Tabel tekst overschrijven"
+
+msgid "Features"
+msgstr "Kenmerken"
+
+msgid "Auto width"
+msgstr "Automatische breedte"
+
+msgid "Sorting"
+msgstr "Sorteren"
+
+msgid "Sorting Order"
+msgstr "Sorteervolgorde"
+
+msgid "Ascending"
+msgstr "Oplopend"
+
+msgid "Descending"
+msgstr "Aflopend"
+
+msgid "Sorting Column"
+msgstr "Kolom sorteren"
+
+msgid "Number of column to apply sort order."
+msgstr "Nummer van kolom om te sorteren"
+
+msgid "Pagination"
+msgstr "Paginering"
+
+msgid "Pagination menu length"
+msgstr "Paginereing menu lengte"
+
+msgid "Searching"
+msgstr "Zoekt"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Table information display field. %s"
+msgstr "Tabel informatie weergave veld. %s"
+
+msgid "Disallow Indexing"
+msgstr "Indexering niet toegestaan"
+
+msgid "Disable indexing table for search bots"
+msgstr "Deactiveer indexering in tabel for zoekmachines"
+
+msgid "PRO option"
+msgstr "PRO optie"
+
+msgid "Styling"
+msgstr "Opmaak"
+
+msgid "Borders"
+msgstr "Randen"
+
+msgid "Cell - adds border around all four sides of each cell, Row – adds border only over and under each row. (i.e. only for the rows)."
+msgstr "Cel - voegt een rand toe aan rondom elke cel, Rij - voegt een rand toe onder elke rij."
+
+msgid "Cell"
+msgstr "Cel"
+
+msgid "Row"
+msgstr "Rij"
+
+msgid "Compact"
+msgstr "Compact"
+
+msgid "Reduce the amount of white-space."
+msgstr "Reduceer de hoeveelheid witte ruimte"
+
+msgid "Highlighting"
+msgstr "Markering"
+
+msgid "Row highlighting on mouse over."
+msgstr "Rij markeren bij mouse-over"
+
+msgid "Disable wrapping"
+msgstr "Deactiveer wrappen"
+
+msgid "Disable wrapping of content in the table, so all text in the cells is on a single line."
+msgstr "Deactiveer wrappen van tabelinhoud, kortom zal de tekst op een enkele lijn blijven."
+
+msgid "Highlight the order column"
+msgstr "Markeer het selecteerde kolom"
+
+msgid "Row striping"
+msgstr "Rij striping"
+
+msgid "Note that the table may look a little different depending on your theme style."
+msgstr "Houdt er rekening mee dat het tabel er een beetje anders uit kan komen te zien, conform je Thema."
+
+msgid "Get PRO version"
+msgstr "Neem de PRO versie"

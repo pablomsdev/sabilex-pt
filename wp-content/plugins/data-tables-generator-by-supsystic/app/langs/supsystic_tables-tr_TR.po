@@ -1,0 +1,377 @@
+msgid ""
+msgstr ""
+"Translator: Mehmet Koçali <membus@gmail.com>\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+
+
+msgid "Actions"
+msgstr "Eylemler"
+
+msgid "Activate"
+msgstr "Aktifleştir"
+
+msgid "Activate License"
+msgstr "Lisansı aktif hale getir"
+
+msgid "Add diagram"
+msgstr "Diagram ekle"
+
+msgid "Add new table"
+msgstr "Yeni tablo ekle"
+
+msgid "Add table"
+msgstr "Tablo ekle"
+
+msgid "Alignment"
+msgstr "Hizalama"
+
+msgid "An error has occurred"
+msgstr "Bir hata oluştu"
+
+msgid "Ascending"
+msgstr "Küçükten büyüğe"
+
+msgid "Auto index"
+msgstr "Otomatik Index"
+
+msgid "Auto width"
+msgstr "Otomatik genişlik"
+
+msgid "Background color"
+msgstr "Zemin rengi"
+
+msgid "Bold"
+msgstr "Kalın"
+
+msgid "Borders"
+msgstr "Kenarlar"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "Can't decode table meta from JSON."
+msgstr "JSON'dan gelen tablo metası çözülemedi."
+
+msgid "Can't decode table rows from JSON."
+msgstr "JSON'dan gelen tablo satırları çözülemedi."
+
+msgid "Caption"
+msgstr "Resim yazısı"
+
+msgid "Cell"
+msgstr "Hücre"
+
+msgid ""
+"Cell - adds border around all four sides of each cell, Row – adds border "
+"only over and under each row. (i.e. only for the rows)."
+msgstr ""
+"Hücre - her hücrenin dört kenarına kenar çizgisi ekler, Satır - sadece her "
+"satırın üstüne ve altına kenar çizgisi ekler. (ör. sadece satırlar için)"
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr "Tablo adını değiştirmek için tıklayın ve sonrasında [Enter] basın."
+
+msgid "Clone"
+msgstr "Klonla"
+
+msgid "Columns"
+msgstr "Sütunlar"
+
+msgid "Comment"
+msgstr "Yorum yap"
+
+msgid "Compact"
+msgstr "Kompakt"
+
+msgid ""
+"Congratulations! You have successfully installed and activated PRO version "
+"of ' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr ""
+"Tebrikler! ' ~ environment.getMenu().getMenuTitle() ~ ' Eklentisinin PRO "
+"sürümünü başarılı bir şekilde yüklediniz."
+
+msgid "Create a link"
+msgstr "Bağlantı oluştur"
+
+msgid "Created"
+msgstr "Oluşturma Tarihi"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delimiter"
+msgstr "Ayırıcı"
+
+msgid "Descending"
+msgstr "Büyükten küçüğe"
+
+msgid "Diagrams"
+msgstr "Diagramlar"
+
+msgid "Disable indexing table for search bots"
+msgstr "Index tablosunu arama botları için devreden çıkarın."
+
+msgid "Disable wrapping"
+msgstr "Kaydırmayı devre dışı bırakın"
+
+msgid ""
+"Disable wrapping of content in the table, so all text in the cells is on a "
+"single line."
+msgstr ""
+"Tabloda veride kaydırmayı devreden çıkarın, böylece bir hücrede yer alan tüm "
+"veri tek satırda yer alır."
+
+msgid "Disallow Indexing"
+msgstr "Indekslemeye izin verme"
+
+msgid "Edit table \"%s\""
+msgstr "\"%s\" tablosunu değiştir"
+
+msgid "Editor"
+msgstr "Düzenleyici"
+
+msgid "Email"
+msgstr "E-posta"
+
+msgid "Export"
+msgstr "Dışarı aktar"
+
+msgid "Export available only in PRO version."
+msgstr "Dışarı aktarma sadece PRO sürümde kullanılabilir"
+
+msgid "Export table"
+msgstr "Tabloyu dışarı aktar"
+
+msgid "Failed to find diagram %s."
+msgstr "%s isimli diagram bulunamadı."
+
+msgid "Failed to find table %s."
+msgstr "%s isimli tablo bulunamadı."
+
+msgid "Failed to import data from the uploaded file"
+msgstr "Yüklenen dosyadan içeriye veri aktarma başarısız oldu."
+
+msgid "Failed to import selected file"
+msgstr "Seçilmiş dosya içeriye aktarılamadı."
+
+msgid "Failed to save table meta data: %s"
+msgstr "%s tablosunun meta verisi kaydedilemedi."
+
+msgid "Failed to upload selected file"
+msgstr "Seçilen dosya yüklenemedi."
+
+msgid "Features"
+msgstr "Özellikler"
+
+msgid "File extension type"
+msgstr "Dosya uzantı tipi"
+
+msgid "Footer"
+msgstr "Sayfa altlığı"
+
+msgid "Get PRO"
+msgstr "PRO Sürümü alın"
+
+msgid "Get PRO version"
+msgstr "PRO Sürümü alın"
+
+msgid "Header"
+msgstr "Sayfa üstbaşlığı"
+
+msgid "Hello Supsystic Team!"
+msgstr "Merhaba Supsystic Takımı!"
+
+msgid "Highlight the order column"
+msgstr "Hizalama yapılan sütunu renklendir"
+
+msgid "Highlighting"
+msgstr "Renklendirme"
+
+msgid "Import"
+msgstr "İçeri aktar"
+
+msgid "Import available only in PRO version."
+msgstr "İçeri aktarma sadece PRO sürümde kullanılabilir"
+
+msgid "Import error"
+msgstr "İçeri aktarma hatası"
+
+msgid "Import settings"
+msgstr "Ayarları içeri aktar"
+
+msgid "Import to the table"
+msgstr "Tabloya aktar"
+
+msgid "Info"
+msgstr "Bilgi"
+
+msgid "Insert picture"
+msgstr "Resim ekle"
+
+msgid "Invalid range specified."
+msgstr "Geçersiz aralık belirtildi"
+
+msgid "Italic"
+msgstr "Eğik yazı"
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "License"
+msgstr "Lisans"
+
+msgid "Loading your table, please wait..."
+msgstr "Tablonuz yükleniyor, lütfen bekleyiniz..."
+
+msgid "Message"
+msgstr "Haber"
+
+msgid "Name"
+msgstr "Adınız"
+
+msgid ""
+"Note that the table may look a little different depending on your theme "
+"style."
+msgstr "Tema stilinize göre tablonuzun görünümünde farklılıklar olabilir."
+
+msgid "Number of column to apply sort order."
+msgstr "Sıralama için kullanılacak sütunun sayısı."
+
+msgid "Other"
+msgstr "Diğer"
+
+msgid "Overview"
+msgstr "Genel bakış"
+
+msgid "Overwrite table text"
+msgstr "Tablo verisinin üstüne yaz"
+
+msgid "PHP"
+msgstr "PHP Kodu"
+
+msgid "PRO option"
+msgstr "PRO Ayarı"
+
+msgid "Pagination"
+msgstr "Sayfalandırma"
+
+msgid "Pagination menu length"
+msgstr "Sayfalandırma menü uzunluğu"
+
+msgid "Plugin options"
+msgstr "Eklenti ayarları"
+
+msgid "Preview"
+msgstr "Ön izleme"
+
+msgid "Reduce the amount of white-space."
+msgstr "Boşlukları azaltın"
+
+msgid "Renew License"
+msgstr "Lisansı yenile"
+
+msgid "Report a bug"
+msgstr "Hata bildir"
+
+msgid "Require a new functionallity"
+msgstr "Yeni özellik talep et"
+
+msgid "Row"
+msgstr "Satır"
+
+msgid "Row highlighting on mouse over."
+msgstr "Üzerine gelindiğinde satırın belirtilmesi"
+
+msgid "Row striping"
+msgstr "Satır şeritleme"
+
+msgid "Rows"
+msgstr "Satırlar"
+
+msgid "Save"
+msgstr "Kaydet"
+
+msgid "Save as"
+msgstr "Farklı kaydet"
+
+msgid "Searching"
+msgstr "Arama"
+
+msgid "Select file type to export table:"
+msgstr "Tabloyu dışarı aktarmak için dosya tipi seçin"
+
+msgid "Select language"
+msgstr "Dil seçin"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Shortcode"
+msgstr "Kısakod"
+
+msgid "Slider by Supsystic"
+msgstr "Supsystic'ten Slider"
+
+msgid "Sorting"
+msgstr "Sıralama"
+
+msgid "Sorting Column"
+msgstr "Sıralama Sütunu"
+
+msgid "Sorting Order"
+msgstr "Sıralama Yönü"
+
+msgid "Styling"
+msgstr "Stil"
+
+msgid "Subject"
+msgstr "Konu"
+
+msgid "Table elements"
+msgstr "Tablo elementleri"
+
+msgid "Table information display field. %s"
+msgstr "Tablo bilgisi gösterme alanı. %s"
+
+msgid "Table title"
+msgstr "Tablo başlığı"
+
+msgid "Tables"
+msgstr "Tablolar"
+
+msgid "Text color"
+msgstr "Yazı rengi"
+
+msgid "The table ID %s not found."
+msgstr "%d tablo ID'si bulunamadı."
+
+msgid "The table with ID %d not exists."
+msgstr "%d ID nolu tablo mevcut değil."
+
+msgid "Title"
+msgstr "Başlık"
+
+msgid "Topic"
+msgstr "Başlık"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Vertical alignment"
+msgstr "Dikey hizalama"
+
+msgid "Website"
+msgstr "İnternet Sitesi"
+
+msgid "Word wrapping"
+msgstr "Kelime kaydırma"
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr "PRO sürümünüzü süresi geçmiş lisans ile güncelleyemezsiniz."
+
+#, fuzzy
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr "Premium destek süreniz ' ~ days ~ ' gün sonra bitecek."

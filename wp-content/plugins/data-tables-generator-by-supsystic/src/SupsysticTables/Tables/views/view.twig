@@ -1,0 +1,861 @@
+{% extends 'layout.twig' %}
+
+{% macro checked(option) %}
+    {% if option is defined and option == 'on' %}
+        checked="checked"
+    {% endif %}
+{% endmacro %}
+
+
+
+{% block content %}
+
+    {% import _self as checkbox %}
+    {% import '@ui/tooltip.twig' as tooltip %}
+
+    <div class="supsystic-item tables-view">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-title-wrap">
+                        <div class="clear"></div>
+                        <!-- /.clear -->
+                    </div>
+                    <!-- /.table-title-wrap -->
+                </div>
+                <!-- /.col-xs-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="subsubsub tabs-wrapper">
+                        <li class="title">
+                            <h2 class="table-title" contenteditable="true"
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                                data-table-title="{{ table.title }}"
+                                title="{{ environment.translate('Click to rename the table and hit [Enter]') }}">
+                                {{ table.title }}
+                            </h2>
+                        </li>
+                        <li>
+                            <a href="#row-tab-settings" class="current button">
+                                <i class="fa fa-fw fa-wrench"></i>
+                                <!-- /.fa fa-fw fa-wrench -->
+                                {{ environment.translate('Settings') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#row-tab-editor" class="button">
+                                <i class="fa fa-fw fa-th"></i>
+                                <!-- /.fa fa-fw fa-th -->
+                                {{ environment.translate('Editor') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#row-tab-preview" class="button">
+                                <i class="fa fa-fw fa-eye"></i>
+                                <!-- /.fa fa-fw fa-eye -->
+                                {{ environment.translate('Preview') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#row-tab-css" class="button">
+                                <i class="fa fa-fw fa-code"></i>
+                                {{ environment.translate('CSS') }}
+                            </a>
+                        </li>
+                        {{ environment.getDispatcher().dispatch('tabs_rendered', [table]) }}
+                    </ul>
+
+                    <ul class="subsubsub control-buttons">
+                        <li>
+                            <button id="buttonSave" class="button">
+                                {{ environment.translate('Save') }}
+                            </button>
+                        </li>
+                        <li>
+                            <button id="buttonDelete" class="button">
+                                {{ environment.translate('Delete') }}
+                            </button>
+                        </li>
+                        <li>
+                            <button id="buttonClone" class="button">
+                                {{ environment.translate('Clone') }}
+                            </button>
+                        </li>
+                        {{ environment.getDispatcher().dispatch('tables-view-buttons-left') }}
+                        <li>
+                            <button id="export" class="button {% if environment.isPro() == false %}pro-notify{% endif %}" data-message="{{ environment.translate('Export available only in PRO version.') }}">
+                                <i class="fa fa-fw fa-upload"></i>
+                                {{ environment.translate('Export') }}
+                            </button>
+                        </li>
+                        <li>
+                            <button id="import" class="button {% if environment.isPro() == false %}pro-notify{% endif %}" data-message="{{ environment.translate('Import available only in PRO version.') }}">
+                                <i class="fa fa-fw fa-download"></i>
+                                {{ environment.translate('Import') }}
+                            </button>
+                        </li>
+                        {{ environment.getDispatcher().dispatch('tables-view-buttons-right') }}
+                    </ul>
+
+                </div>
+                <!-- /.col-xs-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row row-tab" id="row-tab-editor">
+                <div class="col-xs-12">
+
+                    <div id="loadingProgress">
+                        <p class="description">
+                            <i class="fa fa-fw fa-spin fa-circle-o-notch"></i>
+                            <!-- /.fa fa-fw fa-spin fa-circle-o-notch -->
+                            {{ environment.translate('Loading your table, please wait...') }}
+                        </p>
+                        <!-- /.description -->
+                    </div>
+                    <!-- /#loadingProgress -->
+
+                    <div id="tableToolbar">
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Rows')) }} data-toolbar="#toolbar-rows">
+                                    <i class="fa fa-fw fa-th-list"></i>
+                                    <!-- /.fa fa-fw fa-th-list -->
+                                </button>
+                                <div id="toolbar-rows" class="toolbar-content">
+                                    <a href="#" data-method="row">
+                                        <i class="fa fa-fw fa-plus"></i>
+                                        <!-- /.fa fa-fw fa-plus -->
+                                    </a>
+                                    <a href="#" data-method="remove_row">
+                                        <i class="fa fa-fw fa-trash-o"></i>
+                                        <!-- /.fa fa-fw fa-trash-o -->
+                                    </a>
+                                </div>
+                                <!-- /#toolbar-rows -->
+                            </li>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Columns')) }} data-toolbar="#toolbar-cols">
+                                    <i class="fa fa-fw fa-th-large"></i>
+                                    <!-- /.fa fa-fw fa-th-large -->
+                                </button>
+                                <div id="toolbar-cols" class="toolbar-content">
+                                    <a href="#" data-method="column">
+                                        <i class="fa fa-fw fa-plus"></i>
+                                        <!-- /.fa fa-fw fa-plus -->
+                                    </a>
+                                    <a href="#" data-method="remove_col">
+                                        <i class="fa fa-fw fa-trash-o"></i>
+                                        <!-- /.fa fa-fw fa-trash-o -->
+                                    </a>
+                                </div>
+                                <!-- /#toolbar-cols -->
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Bold')) }} data-method="bold">
+                                    <i class="fa fa-fw fa-bold"></i>
+                                    <!-- /.fa fa-fw fa-bold -->
+                                </button>
+                            </li>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Italic')) }} data-method="italic">
+                                    <i class="fa fa-fw fa-italic"></i>
+                                    <!-- /.fa fa-fw fa-italic -->
+                                </button>
+                            </li>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Text color')) }} id="textColor">
+                                    <i class="fa fa-fw fa-font"></i>
+                                    <!-- /.fa fa-fw fa-file-text-o -->
+                                </button>
+                            </li>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Background color')) }} id="bgColor">
+                                    <i class="fa-fw background-fill-icon"></i>
+                                    <!-- /.fa fa-fw fa-tint -->
+                                </button>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Alignment')) }} data-toolbar="#toolbar-alignment">
+                                    <i class="fa fa-fw fa-align-left"></i>
+                                    <!-- /.fa fa-fw fa-align-left -->
+                                </button>
+                                <div id="toolbar-alignment" class="toolbar-content">
+                                    <a href="#" data-method="left">
+                                        <i class="fa fa-fw fa-align-left"></i>
+                                        <!-- /.fa fa-fw fa-align-left -->
+                                    </a><br/>
+                                    <a href="#" data-method="center">
+                                        <i class="fa fa-fw fa-align-center"></i>
+                                        <!-- /.fa fa-fw fa-align-center -->
+                                    </a><br/>
+                                    <a href="#" data-method="right">
+                                        <i class="fa fa-fw fa-align-right"></i>
+                                        <!-- /.fa fa-fw fa-align-right -->
+                                    </a>
+                                </div>
+                                <!-- /#toolbar-alignment -->
+                            </li>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Vertical alignment')) }} data-toolbar="#toolbar-alignment-vertical">
+                                    <i class="fa fa-fw fa-align-left fa-rotate-90"></i>
+                                    <!-- /.fa fa-fw fa-align-left fa-rotate-90 -->
+                                </button>
+                                <div id="toolbar-alignment-vertical" class="toolbar-content">
+                                    <a href="#" data-method="top">
+                                        <sup><i class="fa fa-fw fa-align-center"></i></sup>
+                                        <!-- /.fa fa-fw fa-align-center -->
+                                    </a>
+                                    <a href="#" data-method="middle">
+                                        <small><i class="fa fa-fw fa-align-center"></i></small>
+                                        <!-- /.fa fa-fw fa-align-center -->
+                                    </a>
+                                    <a href="#" data-method="bottom">
+                                        <sub style="bottom: -.6em"><i class="fa fa-fw fa-align-center"></i></sub>
+                                        <!-- /.fa fa-fw fa-align-right -->
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Word wrapping')) }} data-toolbar="#toolbar-word-wrapping-options" id="toolbar-word-wrapping">
+                                    <i class="toolbar-word-wrap"></i>
+                                    <!-- /.fa fa-fw fa-align-left -->
+                                </button>
+                                <div id="toolbar-word-wrapping-options" class="toolbar-content">
+                                    <a href="#" data-method="word-wrap-default">
+                                        <i class="toolbar-word-wrap"></i>
+                                    </a><br/>
+                                    <a href="#" data-method="word-wrap-visible">
+                                        <i class="toolbar-word-wrap word-wrap-visible"></i>
+                                    </a><br/>
+                                    <a href="#" data-method="word-wrap-hidden">
+                                        <i class="toolbar-word-wrap word-wrap-hidden"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>    
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Create a link')) }} data-method="link">
+                                    <i class="fa fa-fw fa-link"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Insert picture')) }} data-method="picture">
+                                    <i class="fa fa-fw fa-picture-o"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Comment')) }} data-toolbar="#toolbar-comment">
+                                    <i class="fa fa-fw fa-comment"></i>
+                                </button>
+                                <div id="toolbar-comment" class="toolbar-content">
+                                    <a href="#" data-method="addEditComment">
+                                        <i class="fa fa-fw fa-pencil"></i>
+                                    </a>
+                                    <a href="#" data-method="removeComment">
+                                        <i class="fa fa-fw fa-trash-o"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button {{ tooltip.attr(environment.translate('Formats')) }} data-toolbar="#toolbar-formats-list" id="toolbar-formats" data-style="list">
+                                    <i class="formats-icon"></i>
+                                </button>
+                                <div id="toolbar-formats-list" class="toolbar-content">
+                                    <a href="#" class="text-format" data-method="setFormat" data-type="text">Plain</a>
+                                    <a href="#" class="currency-format" data-method="setFormat" data-type="currency" data-format="{{ table.settings.currencyFormat | default('$1,0.00') }}">Currency ($1,000.00)</a>
+                                    <a href="#" class="percent-format" data-method="setFormat" data-type="percent" data-format="{{ table.settings.percentFormat | default('0%') }}">Percent (10.02%)</a>
+                                    <a href="#" class="date-format" data-method="setFormat" data-type="date" data-format="{{ table.settings.dateFormat | default('DD.MM.YYYY') }}">Date (25.10.2016)</a>
+                                </div>
+                            </li>
+                        </ul>
+                        {% if environment.isPro() == false %}
+                            <ul>
+                                <li>
+                                    <button {{ tooltip.attr(environment.translate('Add editable field')) }} id="editableFieldProFeature">
+                                        <i class="fa fa-fw fa-pencil-square-o"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        {% endif %}
+                        {{ environment.getDispatcher().dispatch('toolbar_rendered', [table]) }}
+                    </div>
+                    <!-- /#tableToolbar -->
+
+                    <div id="formulaEditor">
+                        <span class="formula-icon">
+                            <em class="function">f</em>(&times;)
+                        </span>
+                        <!-- /.formula-icon -->
+                        <input type="text" id="formula"/>
+                        <!-- /#formula -->
+                        <div class="clear"></div>
+                        <!-- /.clear -->
+                    </div>
+                    <!-- /#formulaEditor -->
+
+                    <div id="tableEditor"></div>
+                    <!-- /#tableEditor -->
+                </div>
+                <!-- /.col-xs-12 -->
+            </div>
+            <!-- /.row -->
+            <form id="settings">
+                <div class="row row-tab" id="row-tab-settings">
+                    <div class="col-sm-4 col-xs-12">
+                        <h3>{{ environment.translate('Table elements') }}</h3>
+                        <table class="form-table">
+                            <tr>
+                                <th scope="row">
+                                    <label for="table-elements-caption">
+                                        {{ environment.translate('Caption') }}
+										{{ tooltip.icon('<img src="http://supsystic.com/_assets/tables/tooltip/caption.jpg"/>', 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="elements[caption]"
+                                            {{ checkbox.checked(table.settings.elements.caption) }}
+                                           id="table-elements-caption"/>
+                                    <!-- /#table-elements-caption -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="table-elements-head">
+                                        {{ environment.translate('Header') }}
+										{{ tooltip.icon('<img src="http://supsystic.com/_assets/tables/tooltip/Header.jpg"/>', 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="elements[head]"
+                                            {{ checkbox.checked(table.settings.elements.head) }}
+                                           id="table-elements-head"/>
+                                    <!-- /#table-elements-head -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="table-elements-foot">
+                                        {{ environment.translate('Footer') }}
+										{{ tooltip.icon('<img src="http://supsystic.com/_assets/tables/tooltip/footer.jpg"/>', 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="elements[foot]"
+                                            {{ checkbox.checked(table.settings.elements.foot) }}
+                                           id="table-elements-foot"/>
+                                    <!-- /#table-elements-foot -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="autoIndex">
+                                        {{ environment.translate('Auto index') }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <select name="autoIndex" id="autoIndex">
+                                        {% for value, title in {'off': 'No index', 'first': 'Use first column', 'new':'Create new column'} %}
+                                            <option value="{{ value }}"
+                                                {% if table.settings.autoIndex == value %}
+                                                    selected="selected"
+                                                {% endif %}>
+                                                {{ title }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- /.form-table -->
+                        <h3>{{ environment.translate('Language') }}</h3>
+                        <table class="form-table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="language-file">
+                                            {{ environment.translate('Select language') }}
+                                        </label>
+                                    </th>
+                                    <td>
+                                        <select name="language[file]" id="language-file">
+                                            <option value="default"
+                                                    {% if table.settings.language.file is not defined or table.settings.language.file == 'default' or translations | length < 1 %}
+                                                selected="selected"
+                                                    {% endif %}>
+                                                English
+                                            </option>
+
+                                            {% for supportedLanguage in translations %}
+                                                <option value="{{ supportedLanguage }}"
+                                                        {% if table.settings.language.file == supportedLanguage %}selected="selected"{% endif %}>
+                                                    {{ supportedLanguage }}
+                                                </option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>{{ environment.translate('Overwrite table text') }}</h3>
+                        <table class="form-table">
+                            <tbody>
+                                {% for key, data in language_override %}
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="language-{{ key }}">
+                                                {{ data.label }}
+                                            </label>
+                                        </th>
+                                        <td>
+                                            <input id="language-{{ key }}" type="text" name="language[{{ key }}]" value="{{ attribute(table.settings.language, key) }}" placeholder="{{ data.default }}">
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.col-sm-4 col-xs-12 -->
+                    <div class="col-sm-4 col-xs-12">
+                        <h3>{{ environment.translate('Features') }}</h3>
+                        <table class="form-table">
+                            <tr>
+                                <th scope="row">
+                                    <label for="features-auto-width">
+                                        {{ environment.translate('Auto width') }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="features[auto_width]"
+                                            {{ checkbox.checked(table.settings.features.auto_width) }}
+                                           id="features-auto-width"/>
+                                    <!-- /#features-auto-width -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="features-ordering">
+                                        {{ environment.translate('Sorting') }}
+										{{ tooltip.icon('<p style="width:227px; padding:5px margin:0">To allow dynamic sorting with arrows you must enable Header option.</p><img src="http://supsystic.com/_assets/tables/tooltip/Ordrering.jpg"/>', 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="features[ordering]"
+                                            {{ checkbox.checked(table.settings.features.ordering) }}
+                                           id="features-ordering"
+                                           data-target-toggle=".sorting-options"/>
+                                    <!-- /#features-ordering -->
+                                </td>
+                            </tr>                        
+                            <tr class="sorting-options" 
+                               {% if table.settings.features.ordering is not defined %} 
+                                    style="display:none"
+                               {% endif %} 
+                            >
+                                <th scope="row">
+                                    <label for="sortingOrder">
+                                        {{ environment.translate('Sorting Order') }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <select name="sortingOrder">
+                                        <option value="asc">{{ environment.translate('Ascending') }}</option>
+                                        <option value="desc"
+                                            {% if table.settings.sortingOrder == 'desc' %}
+                                                selected="selected" 
+                                            {% endif %}
+                                        >{{ environment.translate('Descending') }}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="sorting-options"
+                               {% if table.settings.features.ordering is not defined %} 
+                                    style="display:none"
+                               {% endif %} 
+                            >
+                                <th scope="row">
+                                    <label for="sortingOrderColumn">
+                                        {{ environment.translate('Sorting Column') }}
+                                        {{ tooltip.icon(environment.translate('Number of column to apply sort order.')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input name="sortingOrderColumn" id="sortingOrderColumn" type="text" value="{{ sortingOrderColumn | default(1) }}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="features-pagination">
+                                        {{ environment.translate('Pagination') }}
+                                        {{ tooltip.icon('<img src="http://supsystic.com/_assets/tables/tooltip/Pagination.jpg"/>', 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input data-toggle="collapse" type="checkbox" name="features[paging]"
+                                        {{ checkbox.checked(table.settings.features.paging) }}
+                                        id="features-pagination"
+                                        data-target-toggle=".pagination-length"/>
+                                    <!-- /#features-pagination -->
+                                </td>
+                            </tr>
+                            <tr class="pagination-length"
+                                {% if table.settings.features.paging is not defined %} 
+                                    style="display:none"
+                               {% endif %} 
+                            >
+                                <th scope="row">
+                                    <label for="pagination-length">
+                                        {{ environment.translate('Pagination menu length') }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="text" 
+                                        name="paginationMenuLength"
+                                        value="{{ table.settings.paginationMenuLength | default('50,100,All') }}"
+                                        id="pagination-length" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="features-searching">
+                                        {{ environment.translate('Searching') }}
+										{{ tooltip.icon('<img src="http://supsystic.com/_assets/tables/tooltip/Searching.jpg"/>', 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="features[searching]"
+                                            {{ checkbox.checked(table.settings.features.searching) }}
+                                           id="features-searching"/>
+                                    <!-- /#features-searching -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="features-state-saving">
+                                        {{ environment.translate('Info') }}
+                                        {{ tooltip.icon(environment.translate('Table information display field. %s') | format('<img src="http://supsystic.com/_assets/tables/tooltip/info.jpg"/>') | raw, 'top', true) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="features[info]"
+                                            {{ checkbox.checked(table.settings.features.info) }}
+                                           id="features-state-saving"/>
+                                    <!-- /#features-state-saving -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="disallowIndexing">
+                                        {{ environment.translate('Disallow Indexing') }}
+                                        {{ tooltip.icon(environment.translate('Disable indexing table for search bots')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="disallowIndexing"
+                                        {{ checkbox.checked(table.settings.disallowIndexing) }} />
+                                </td>
+                            </tr>
+                            {% if environment.isPro() == false %}
+                                <tr>
+                                    <th scope="row">
+                                        <label for="features-export-unavailable">
+                                            {{ environment.translate('Frontend Export') }}
+                                            {{ tooltip.icon(environment.translate('Allow export table to pdf, csv, xls on frontend')) }}
+                                            <br>
+                                            <span>
+                                                <a target="_blank" class="supsystic-pro-feature" href="{{ build_pro_url({ 'utm_medium': 'export_feature' }) }}">
+                                                    {{ environment.translate('PRO option') }}
+                                                </a>
+                                            </span>
+                                        </label>
+                                    </th>
+                                    <td>
+                                        <input type="checkbox" disabled="disabled" id="features-export-unavailable"/>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                            {{ environment.getDispatcher().dispatch('tables-view-features', [table]) }}
+                        </table>
+                        <!-- /.form-table -->
+                        <h3>{{ environment.translate('Editor settings') }}</h3>
+                        <table class="form-table">
+                            <tbody>
+                                <tr>
+                                    <td> 
+                                        {{ environment.translate('Currency Format') }}
+                                        {{ tooltip.icon(environment.translate('Set output format for currencies e.g ($ 1,000.00, € 1.00)')) }}
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input style="width:100px" name="currencyFormat" type="text" value="{{ table.settings.currencyFormat | default('$1,000.00') }}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> 
+                                        {{ environment.translate('Percent Format') }}
+                                        {{ tooltip.icon(environment.translate('Set output format for percent numbers e.g (0.00%, 1%)')) }}
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input style="width:100px" name="percentFormat" type="text" value="{{ table.settings.percentFormat | default('10.00%') }}">
+                                    </td> 
+                                </tr>
+                                <tr>                                  
+                                    <td> 
+                                        {{ environment.translate('Date Format') }}
+                                        {{ tooltip.icon(environment.translate('Set output format for date e.g (YYYY-MM-DD, MM.DD.YYYY)')) }}
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input style="width:100px" name="dateFormat" type="text" value="{{ table.settings.dateFormat | default('DD.MM.YYYY') }}">
+                                    </td>   
+                                </tr> 
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.col-sm-4 col-xs-12 -->
+                    <div class="col-sm-4 col-xs-12">
+                        <h3>{{ environment.translate('Styling') }}</h3>
+                        <table class="form-table">
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-border">
+                                        {{ environment.translate('Borders') }}
+                                        {{ tooltip.icon(environment.translate('Cell - adds border around all four sides of each cell, Row – adds border only over and under each row. (i.e. only for the rows).')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <select name="styling[border]"
+                                            id="styling-border">
+                                        {% for option in [{ 'name': environment.translate('Cell'), 'value': 'cell-border' }, { 'name': environment.translate('Row'), 'value': 'row-border' }] %}
+                                            <option value="{{ option.value }}" {% if table.settings.styling.border == option.value %}selected="selected"{% endif %}>{{ option.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <!-- /#styling-border -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-compact">
+                                        {{ environment.translate('Compact') }}
+                                        {{ tooltip.icon(environment.translate('Reduce the amount of white-space.')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox"
+                                           name="styling[compact]"
+                                            {{ checkbox.checked(attribute(table.settings.styling, 'compact')) }}
+                                           id="styling-compact"/>
+                                    <!-- /#styling-compact -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-hover">
+                                        {{ environment.translate('Highlighting') }}
+                                        {{ tooltip.icon(environment.translate('Row highlighting on mouse over.')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="styling[hover]"
+                                           {{ checkbox.checked(attribute(table.settings.styling, 'hover')) }}
+                                           id="styling-hover"/>
+                                    <!-- /#styling-hover -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-nowrap">
+                                        {{ environment.translate('Disable wrapping') }}
+                                        {{ tooltip.icon(environment.translate('Disable wrapping of content in the table, so all text in the cells is on a single line.')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox"
+                                           name="styling[nowrap]"
+                                           {{ checkbox.checked(attribute(table.settings.styling, 'nowrap')) }}
+                                           id="styling-nowrap"/>
+                                    <!-- /#styling-nowrap -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-order-column">
+                                        {{ environment.translate('Highlight the order column') }}
+                                        {{ tooltip.icon('Highlight the column that the table data is currently ordered on.') }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox"
+                                           name="styling[order-column]"
+                                           {{ checkbox.checked(attribute(table.settings.styling, 'order-column')) }}
+                                           id="styling-order-column"/>
+                                    <!-- /#styling-order-column -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-stripe">
+                                        {{ environment.translate('Row striping') }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox"
+                                           name="styling[stripe]"
+                                           {{ checkbox.checked(attribute(table.settings.styling, 'stripe')) }}
+                                           id="styling-stripe"/>
+                                    <!-- /#styling-stripe -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="styling-stripe">
+                                        {{ environment.translate('Responsive Mode') }}
+                                        {{ tooltip.icon(
+                                            environment.translate('Standard Responsive mode - in this mode if table content doesn’t fit all columns become under each other with one cell per row') ~ '<br>' ~
+                                            environment.translate('Automatic column hiding - in this mode table columns will collapse from right to left if content does not fit to parent container width') ~ '<br>' ~ 
+                                            environment.translate('Horizontal scroll - in this mode scroll bar will be added if table overflows parent container width') ~ '<br>' ~ 
+                                            environment.translate('Disable Responsivity - default table fluid layout') ~ '<br>'
+                                        ) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <select style="max-width: 120px;" name="responsiveMode" id="features-export" >
+                                    {% for value, name in {
+                                        '0': environment.translate('Standard Responsive mode'),
+                                        '1': environment.translate('Automatic column hiding'),
+                                        '2': environment.translate('Horizontal scroll'),
+                                        '3': environment.translate('Disable Responsivity'),
+                                    } %}
+                                        <option value="{{ value }}" 
+                                        {% if value == table.settings.responsiveMode|default(0) %}
+                                            selected="selected"
+                                        {% endif %}
+                                        >
+                                            {{ name }}
+                                        </option>
+                                    {% endfor %}
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="paragraphMode">
+                                        {{ environment.translate('Enable paragraph mode') }}
+                                        {{ tooltip.icon(environment.translate('This mode allows you to separate the content into paragraphs.')) }}
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="checkbox"
+                                        name="styling[paragraphMode]"
+                                        {{ checkbox.checked(attribute(table.settings.styling, 'paragraphMode')) }}
+                                        id="paragraphMode"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- /.form-table -->
+                    </div>
+                    <!-- /.col-sm-4 col-xs-12 -->
+
+
+                </div>
+            </form>
+            <div class="row row-tab" id="row-tab-preview">
+                <div class="col-xs-12">
+                    <div id="table-preview">
+                    </div>
+                    <!-- /#table-preview -->
+                    <p class="description">
+                        <i class="fa fa-fw fa-exclamation-circle"></i>
+                        <!-- /.fa fa-fw fa-exclamation-circle -->
+                        {{ environment.translate('Note that the table may look a little different depending on your theme style.') }}
+                    </p>
+                    <!-- /.description -->
+                </div>
+                <!-- /.col-xs-12 -->
+            </div>
+            <!-- /.row row-tab -->
+            <div class="row row-tab" id="row-tab-css">
+                <div class="col-xs-12">
+                    {% set defaultCss %}
+/* Here you can add custom CSS for the current table */
+/* Lean more about CSS: https://en.wikipedia.org/wiki/Cascading_Style_Sheets */
+
+/* To prevent the use of styles to other tables use "#supsystic-table-{{ table.id }}" as a base selector
+for example:
+#supsystic-table-{{ table.id }} { ... }
+#supsystic-table-{{ table.id }} tbody { ... }
+#supsystic-table-{{ table.id }} tbody tr { ... }
+*/
+                    {% endset %}
+                    <div id="css-editor">{% if table.meta.css | length > 0 %}{{ table.meta.css }}{% else %}{{ defaultCss }}{% endif %}</div>
+                </div>
+            </div>
+            {{ environment.getDispatcher().dispatch('tabs_content_rendered', [table]) }}
+        </div>
+        <!-- /.container-fluid -->
+        {{ environment.getDispatcher().dispatch('tables-view-footer') }}
+
+        <div id="proPopup" style="display: none;" title="{{ environment.translate('Get PRO version') }}">
+            <p>
+                Please be advised that this option is available only in
+                <a target="_blank" href="{{ build_pro_url({ 'utm_medium': 'import_export' }) }}" style="color: #000;">PRO
+                    version</a>. You can
+                <a target="_blank" href="{{ build_pro_url({ 'utm_medium': 'import_export' }) }}" class="button supsystic-button"><span class="ui-button-text">Get PRO</span></a> today and get this and other PRO option for your tables!
+            </p>
+        </div>
+
+        <div id="cloneDialog" style="display: none;" title="Clone">
+            <div class="input-group">
+                <label>{{ environment.translate('Name') }}</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div id="editableFieldProFeatureDialog" style="display: none;" title="{{ environment.translate('Editable fields') }}">
+            {% set url = '<a target="_blank" href="' ~ build_pro_url({ 'utm_medium': 'editable_fields' }) ~ '" style="color: #000;">' ~ environment.translate('PRO version') ~ '</a>' %}
+            {% set url2 = '<a target="_blank" href="' ~ build_pro_url({ 'utm_medium': 'editable_fields' }) ~ '" style="color: #000;" class="button supsystic-button"><span class="ui-button-text">' ~ environment.translate('Get PRO') ~ '</span></a>' %}
+            <p>
+                {{ environment.translate('Please be advised that this option is available only in %s. You can %s today and get this and other PRO option for your tables!')|format(url, url2)|raw }}
+            </p>
+        </div>
+
+        <div id="insertUrlDialog" style="display: none;" title="{{ environment.translate('Insert url') }}">
+            <div class="input-group">
+                <p>
+                    <label>{{ environment.translate('Url') }}</label>
+                    <input type="text" class="url" >
+                </p>
+                <p>                   
+                    <label>{{ environment.translate('Link Text') }}</label>
+                    <input type="text" class="link-text">
+                </p>
+                <p>
+                    <label><span>&nbsp;</span>
+                        <input type="checkbox" class="link-target">
+                        <span>&nbsp;</span>{{ environment.translate('Open link in a new tab') }}
+                    </label>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- /.supsystic-item -->
+{% endblock %}

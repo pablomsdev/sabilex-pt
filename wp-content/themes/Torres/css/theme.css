@@ -1,0 +1,572 @@
+body{
+	background:#545454 url(../images/classy_fabric.png) fixed;
+	color: #777;
+	padding: 60px 0px;
+}
+
+#page{
+	width:960px;
+	margin: 0px auto;
+	background: #fff;
+	box-shadow: 0px 0px 2px 2px #222;
+}
+
+/* Header */
+
+#masthead{
+	height: 70px;
+	background: #070707;
+}
+
+.site-branding{
+	width: 240px;
+	height: 70px;
+	float: left;
+	background: #e50d0f;
+}
+
+h1.site-title{
+	line-height: 70px;
+	font-size: 36px;
+	color: #fff;
+	padding: 0px 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h1.site-title a:link, h1.site-title a:visited{
+	color: #fff;
+}
+
+/* Menu */
+
+.main-navigation{
+	width: 720px;
+	float: left;
+	clear: right;
+	display: block;
+		font-size: 14px;
+}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 10px;
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+	line-height: 70px;
+	padding: 0px 10px;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	color: #eee;
+}
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	z-index: 99999;
+	background: #070707;
+	padding: 0px 0px;
+
+
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+	
+}
+.main-navigation ul ul li {
+	line-height: 1;
+	padding: 15px 10px;
+	border-bottom: 1px solid #222;
+	
+}
+.main-navigation li:hover > a {
+	color: #fff;
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+/* Slider */
+
+.flexslider{
+	border: none;
+	box-shadow:none;
+	overflow:hidden;
+}
+
+.flex-caption{
+	position: absolute;
+	left: 80px;
+	bottom:50px;
+	color: #fff;
+	width: 800px;
+}
+
+.flex-caption h2{
+		font-size: 36px;
+}
+
+/* Content */
+
+.page-header{
+	border-bottom: 3px solid #111;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+h1.page-title{
+	color: #222;
+	font-weight: bold;
+}
+.taxonomy-description p{
+	margin: 0px;
+}
+
+#primary{
+	width: 800px;
+	margin: 0px auto;
+	padding: 50px 0px;
+}
+
+article.post{
+	margin-bottom: 30px;
+}
+
+h1.entry-title{
+	font-size: 36px;
+	font-weight: bold;
+	color: #111;
+}
+
+h1.entry-title a:link, h1.entry-title a:visited{
+	color: #111;
+}
+.entry-meta{
+	color: #e50d0f;
+	margin-bottom: 10px;
+}
+
+.postim{
+	margin-bottom: 20px;
+}
+
+.readmore{
+	float: right;
+	display: block;
+	background: #111;
+	color: #fff!important;
+	padding: 7px 15px;
+	border-radius: 3px;
+}
+
+.readmore:hover{
+	background: #e50d0f;
+}
+
+
+/* Widgets */
+.widget {
+	margin: 0 0px 30px 0px;
+	
+}
+
+h1.widget-title, h3.sidetitl {
+    font-size: 18px;
+ 	color:#eee;
+ 	height: 40px;
+ 	line-height: 40px;
+ 	font-weight: bold;
+  	margin-bottom: 10px;
+}
+
+.widget ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px 0px 20px 0px;
+}
+
+.widget li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.widget ul ul {
+    list-style-type: none;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
+.widget ul li {
+    list-style-type: none;
+    margin: 0px;
+    margin: 0px 0px;
+    color: #929699;
+}
+
+.widget ul li a:link,.widget ul li a:visited {
+    color: #929699;
+    text-decoration: none;
+}
+
+.widget ul li a:hover{
+	color:#ddd;
+}
+
+.widget.widget_categories ul li,.widget.widget_pages ul li,.widget.widget_archive ul li,.widget.widget_links ul li,.widget.widget_meta ul li {
+    border-bottom: 1px dotted #515151;
+    padding: 7px 0px;
+}
+
+.widget.widget_recent_entries ul li  {
+	padding: 7px 0px;
+     border-bottom: 1px dotted #515151;
+}
+
+.widget ul#recentcomments li.recentcomments {
+     border-bottom: 1px dotted #515151;
+    padding: 7px 0;
+}
+
+.widget .textwidget p {
+    padding: 0px 0px;
+}
+
+.widget .tagcloud {
+    padding: 0px 0px 20px 0px;
+ 
+}
+
+.widget .tagcloud a{
+	color:#fff;
+	background: #fa4c00;
+	padding: 5px 10px;
+	margin: 0px 5px 5px 0px;
+   font-size: 12px!important;
+   display: inline-block;	
+}
+
+.widget .tagcloud a:hover{
+	background: #3C3C3C;
+}
+.widget #calendar_wrap{
+	padding:0px 20px 20px 20px;
+
+}
+
+.squarebanner{
+	margin:0px;
+}
+
+
+.squarebanner ul{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 10px 0px !important;
+
+}
+
+.squarebanner ul li{
+	margin:10px 10px 5px 0px;
+	list-style:none;
+	float:left;
+	width:110px;
+	height: 110px;
+}
+
+
+li.rbanner{
+	margin-right:0px!important;
+}
+
+/* Comments */
+
+#comments{
+	padding: 30px 0px;
+	border-top:3px solid #111;
+}
+
+h2.comments-title{
+	font-size: 24px;
+	margin-bottom: 30px;
+	color: #000;
+}
+
+#comments ol.comment-list {
+    clear: both;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+}
+
+#comments ol.comment-list li.comment,#comments ol.comment-list li.pingback {
+    margin: 0px 0px 40px 0px;
+    padding: 0px 0px;
+    line-height: 1.6;
+
+}
+
+ol.comment-list li .comment-author .avatar {
+     margin: 10px 20px 20px 0px;
+     float:left;
+     width:64px;
+     height: 64px;
+     border: 1px solid #ddd;
+}
+
+cite.fn {
+    color: #444;
+    font-style:normal;
+    font-weight:bold;
+    font-size:18px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+cite.fn a:link,cite.fn a:visited {
+	color:#444;
+}
+
+ol.comment-list li .comment-meta{
+
+	padding-bottom: 10px;
+}
+
+ol.comment-list li .comment-meta a {
+    
+    text-decoration: none!important;
+    
+    
+}
+
+.comment-metadata{
+	font-size: 12px;
+	color: #999;
+}
+
+.comment-metadata a:link, .comment-metadata a:visited{
+	color: #999;
+}
+
+.comment-content{
+	padding: 0px 10px 0px 84px;
+
+}
+
+ol.comment-list li .reply {
+    color: #ed564b;
+    font-size: 12px;
+    margin-left: 84px;
+
+}
+
+ol.comment-list li .reply a {
+    color: #fff;
+    background: #e50d0f;
+    padding: 8px 18px;
+}
+
+.space{
+	height:30px;
+}
+
+
+ol.comment-list li ul.children {
+    list-style: none;
+    text-indent: 0;
+    margin: 40px 0px 0px 84px;
+}
+
+
+#respond {
+    margin: 30px 0;
+
+}
+
+#respond h3 {
+    font-size: 18px;
+    color: #3a4755;
+    padding: 5px 0px;
+    margin:0px 0px;
+}
+
+#commentform {
+    padding: 0px 0px;
+}
+
+#commentform p {
+    color: #777;
+    margin: 5px 0;
+}
+
+.form-allowed-tags{
+	font-size:13px;
+}
+
+#respond label {
+    display:inline;
+    color: #777;
+    padding: 5px 0;
+}
+
+#respond input {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #777;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+}
+
+#commentform input {
+    width: 50%;
+    display:block;
+    margin-top:5px;
+}
+
+#respond input#submit {
+	width:130px;
+    background:#111;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 12px 18px;
+    border-radius: 3px;
+    box-shadow: none;
+    border:none;
+    text-shadow: none;
+    }
+
+
+#respond input#submit:hover{
+	background: #e50d0f;
+}
+textarea#comment {
+    display:block;
+    margin-top:5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 70%;
+    color: #333;
+    margin: 5px 0 0;
+    padding: 10px 10px;
+}
+
+
+.form-allowed-tags{
+	padding:20px 0px;
+
+}
+
+
+
+/* paginate */
+
+.paginate{
+	margin-bottom: 0px;
+	padding:0px 0px 0px 0px;
+	
+}
+
+.paginate a{
+	background: #636363;
+    display: block;
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.paginate span{
+	color: #fff;
+    display: block;
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    background: #e50d0f;
+}
+
+/* Footer widget */
+
+
+#bottom{
+	background: #3a3c3d;
+	padding: 30px 0px;
+}
+
+.footer-cover{
+	width: 800px;
+	margin: 20px 80px;
+}
+
+.footer-left, .footer-middle, .footer-right{
+	float: left;
+	width: 240px;
+	margin-right: 40px;
+}
+
+.footer-right{
+	margin-right: 0px;
+}
+
+
+
+
+/* Footer */
+
+.site-footer{
+	padding: 20px 20px;
+	background:#2a2b2d;
+	text-align: center;
+	font-size: 14px;
+}
+
+.fcred{
+	padding: 10px 10px;
+	color: #aaa;
+}
+
+.fcred a:link, .fcred a:visited{
+	color:#aaa;
+}

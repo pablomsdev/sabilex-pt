@@ -1,0 +1,165 @@
+{% macro cell(cell, rowIndex, cellIndex, tag, context) %}
+    {% set data = cell.data %}
+    {% if context.table.settings.styling.paragraphMode %}
+        {% set data = data | raw | nl2br %}
+    {% endif %}
+    <{{tag}}
+        {% if context.table.settings.styling.compact is not defined and rowIndex == '1'%}
+            {% if context.table.meta.columnsWidth is defined %}
+                style="width:{{ context.table.meta.columnsWidth[cellIndex] }}%;"
+            {% else %}
+                width="{{ cell.width }}"
+            {% endif %}
+        {% endif %}
+        {% if cell.dateOrder is defined %}
+            data-order="{{ cell.dateOrder }}"
+        {% endif %}
+        {% if cell.comment is defined %}
+            title="{{ cell.comment }}"
+        {% endif %}
+        data-cell-id="{{ context.cols[cellIndex] ~ rowIndex }}"
+        {% if cell.data[:1] == '=' %}
+            data-formula="{{ cell.data | slice(1) }}"
+            {% set data = cell.calculatedValue %}
+        {% endif %}
+        {% if cell.data[:2] == '`=' %}
+            {% set data = cell.data | slice(1) %}
+        {% endif %}
+        class="{{ cell.meta | join(' ') | trim }}"
+        data-x="{{ cellIndex }}"
+        data-y="{{ rowIndex }}"
+        {% if cell.type != 'text' %}
+            data-cell-type="{{ cell.type }}"
+            data-cell-format="{{ cell.format }}"
+        {% endif %}
+        {% if cell.comment is defined %}
+            title="{{ cell.comment }}"
+        {% endif %}
+        {% if cell.hidden == 1 %}
+            {% set display = false %}
+            {% set colspan = 1 %}
+            {% set rowspan = 1 %}
+            {% for mergedCell in context.table.meta.mergedCells %}
+                {{ mergedCell.row }}
+                {{ rowIndex}}
+                {% if mergedCell.row == rowIndex - 1 and mergedCell.col == cellIndex %}
+                    {% set display = true %}
+                    {% set colspan = mergedCell.colspan %}
+                    {% set rowspan = mergedCell.rowspan %}
+                {% endif %}
+            {% endfor %}
+
+            {% if display == false %}
+                data-hide="true"
+            {% endif %}
+                data-colspan="{{ colspan }}"
+                data-rowspan="{{ rowspan }}"
+        {% endif %}
+        data-original-value="{{ data }}"
+    >
+     {{ data | raw }}
+    </{{tag}}>
+{% endmacro %}
+
+{% spaceless %}
+    {% import _self as m %}
+    {% set cols = 'A'..'Z' %}
+        
+    <div class="supsystic-tables-wrap">
+        {% block before_table %}{% endblock %}
+        <table 
+            {% block table_attributes %}{% endblock %}
+            class="supsystic-table {{ table.settings.styling | keys | join(' ') }} 
+            {% if 'border' in table.settings.styling | keys %}
+                {{ table.settings.styling.border }}
+            {% endif %}" 
+            id="supsystic-table-{{ table.id }}" 
+            data-features="{{ table.settings.features | keys | json_encode }}" 
+            data-pagination-length="{{ table.settings.paginationMenuLength }}" 
+            data-lang="{{ table.settings.language.file }}" 
+            data-override="{{ table.settings.language | json_encode }}"
+            data-auto-index="{{ table.settings.autoIndex }}"
+            data-currency-format="{{ table.settings.currencyFormat | default('$1,0.00') }}"
+            {% if 'ordering' in table.settings.features | keys %}
+                data-sort-order="{{ table.settings.sortingOrder }}"
+                data-sort-column="{{ table.settings.sortingOrderColumn }}"
+            {% endif %}
+            data-head="{{ table.settings.elements.head }}"
+            data-foot="{{ table.settings.elements.foot }}"
+            data-responsive-mode="{{ table.settings.responsiveMode|default(1) }}"
+        >
+
+            {% block caption %}
+                {% if table.settings.elements.caption is defined %}
+                    <caption>{{ table.title | title }}</caption>
+                {% endif %}
+            {% endblock %}
+
+            {% block thead %}
+                <thead>
+                <tr>
+                    {% if table.settings.autoIndex == 'new' %}
+                        <th width="0"></th>
+                    {% endif %}
+                    {% for column in table.rows | first %}
+                        {% for cellIndex, cell in column %}
+                            {% if table.settings.elements.head is defined %}
+                                {{ m.cell(cell, 1, cellIndex, 'th', _context) }}
+                            {% else %}
+                                <th style="width:{{ table.meta.columnsWidth[cellIndex] }}%;"></th>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </tr>
+                </thead>
+            {% endblock %}
+
+            {% block tfoot %}
+                {% if table.settings.elements.foot is defined %}
+                    <tfoot>
+                    <tr>
+                        {% if table.settings.autoIndex == 'new' %}
+                            <th></th>
+                        {% endif %}
+                        {% for column in table.rows | first %}
+                            {% for cellIndex, cell in column %}
+                                {{ m.cell(cell, 1, cellIndex, 'th', _context) }}
+                            {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    </tfoot>
+                {% endif %}
+            {% endblock %}
+
+            {% block tbody %}
+            <tbody>
+                {% for row in table.rows | slice(table.settings.elements.head or table.settings.elements.foot ? 1 : 0) %}
+                    {% set rowNumber = loop.index + (table.settings.elements.head or table.settings.elements.foot ? 1 : 0) %}
+                        <tr 
+                            {% if row.height != 'NaN' and row.height | length > 1 %}
+                                style="height: {{ row.height }}px"
+                            {% endif %}
+                        >
+                            {% if table.settings.autoIndex == 'new' %}
+                                <td></td>
+                            {% endif %}
+                            {% for cellIndex, cell in row.cells %}
+                                {{ m.cell(cell, rowNumber, cellIndex, 'td', _context) }}
+                            {% endfor %}
+                        </tr>
+                {% endfor %}
+                </tbody>
+            {% endblock %}
+        </table>
+        <!-- /#supsystic-table-{{ table.id }}.supsystic-table -->
+
+        {% block after_table %}{% endblock %}
+
+        <div id="supsystic-table-{{ table.id }}-css" style="display: none;">{{ table.meta.css }}</div>
+    </div>
+    <!-- /.supsystic-tables-wrap -->
+
+    <!-- Tables Generator by Supsystic -->
+    <!-- Version: {{ environment.getConfig().get('plugin_version') }} -->
+    <!-- http://supsystic.com/ -->
+{% endspaceless %}

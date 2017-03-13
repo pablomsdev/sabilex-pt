@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-01 23:33+0100\n"
+"PO-Revision-Date: 2015-12-02 12:23+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+
+#: includes/class-wp-mapa-politico-settings.php:70
+#, fuzzy
+msgid "WP Mapa Politico"
+msgstr "WP Mapa Politico"
+
+#: includes/class-wp-mapa-politico-settings.php:99
+#: includes/class-wp-mapa-politico-settings.php:144
+#, fuzzy
+msgid "Configuración"
+msgstr "Configuración"
+
+#: includes/class-wp-mapa-politico-settings.php:112
+#, fuzzy
+msgid "Inicio"
+msgstr "Inicio"
+
+#: includes/class-wp-mapa-politico-settings.php:113
+#, fuzzy
+msgid ""
+"Bienvenido al WP Mapa Politico España, plugin WordPress que te\n"
+"\t\t\t\t\t\t\t\t\t\t\tpermitirá mostrar un mapa politico de España con areas "
+"seleccionables."
+msgstr ""
+"Bienvenido al WP Mapa Politico España, plugin WordPress que te\n"
+"\t\t\t\t\t\t\t\t\t\t\tpermitirá mostrar un mapa politico de España con areas "
+"seleccionables."
+
+#: includes/class-wp-mapa-politico-settings.php:129
+#, fuzzy
+msgid "Mapa"
+msgstr "Mapa"
+
+#: includes/class-wp-mapa-politico-settings.php:130
+#, fuzzy
+msgid ""
+"Define los enlaces para cada una de las provincias. # es un enlace vacío, a "
+"usar sino se quiere definir enlace."
+msgstr ""
+"Define los enlaces para cada una de las provincias. # es un enlace vacío, a "
+"usar sino se quiere definir enlace."
+
+#: includes/class-wp-mapa-politico-settings.php:145
+#, fuzzy
+msgid "Configuración aspectos del plugins."
+msgstr "Configuración aspectos del plugins."
+
+#: includes/class-wp-mapa-politico-settings.php:149
+#, fuzzy
+msgid "Color del fondo del mapa"
+msgstr "Color del fondo del mapa"
+
+#: includes/class-wp-mapa-politico-settings.php:150
+#, fuzzy
+msgid "Seleccione el color del fondo del mapa."
+msgstr "Seleccione el color del fondo del mapa."
+
+#: includes/class-wp-mapa-politico-settings.php:225
+#, fuzzy
+msgid "WP Mapa Politico España"
+msgstr "WP Mapa Politico España"
+
+#: includes/class-wp-mapa-politico-settings.php:284
+#, fuzzy
+msgid "Datos guardados correctamente"
+msgstr "Datos guardados correctamente"
+
+#: includes/class-wp-mapa-politico-settings.php:303
+#: includes/class-wp-mapa-politico-settings.php:321
+#, fuzzy
+msgid "Guardar cambios"
+msgstr "Guardar cambios"
+
+#: includes/class-wp-mapa-politico-settings.php:411
+#: includes/class-wp-mapa-politico-settings.php:420
+#: includes/class-wp-mapa-politico.php:223
+#: includes/class-wp-mapa-politico.php:232
+#, fuzzy
+msgid "Cheatin&#8217; huh?"
+msgstr "Cheatin&#8217; huh?"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:159
+#, fuzzy
+msgid "Subir una imagen"
+msgstr "Subir una imagen"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:159
+#, fuzzy
+msgid "Usar imagen"
+msgstr "Usar imagen"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:159
+#, fuzzy
+msgid "Subir nueva imagen"
+msgstr "Subir nueva imagen"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:160
+#, fuzzy
+msgid "Borrar imagen"
+msgstr "Borrar imagen"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:219
+#, fuzzy
+msgid "Enlaces Asociados a Provincias"
+msgstr "Enlaces Asociados a Provincias"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:224
+#, fuzzy
+msgid "Zona"
+msgstr "Zona"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:225
+#, fuzzy
+msgid "Href"
+msgstr "Href"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:226
+#, fuzzy
+msgid "Title"
+msgstr "Title"
+
+#: includes/lib/class-wp-mapa-politico-admin-api.php:227
+#, fuzzy
+msgid "Target"
+msgstr "Target"

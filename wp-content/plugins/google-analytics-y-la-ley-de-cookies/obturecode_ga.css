@@ -1,0 +1,80 @@
+#obt_ga_banner{
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #555;
+}
+
+#obt_ga_contenido h2{
+	color: #EEE;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	clear: both;
+}
+#obt_mask_overall h2 {
+	color: #EEE;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	clear: both;
+}
+#obt_ga_contenido p{
+	color: #EEE;
+	margin: 0px;
+	clear: both;
+	font-size: 13px;
+}
+#obt_ga_contenido a{
+	color: #FFF;
+}
+
+#obt_ga_contenido{
+	float:left;
+	width: 90%;
+}
+
+#obt_ga_boton{
+	float: right;
+	height: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FFF;
+}
+.btn_intrusive{
+	width: 50%;
+	text-align: center;
+	float:none !important;
+	margin: 0 auto !important;
+}
+#obt_ga_clear{
+	clear: both;
+}
+
+#obt_mask_overall {
+  	position:fixed;
+  	z-index:9000;
+	left:0;
+  	top:0;
+  	width: 100%;
+  	height: 100%;
+  	background-color:rgba(0,0,0,0.7);;
+}
+.obt_ga_popup_intrusive_centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.obt_ga_popup_intrusive{
+	padding: 20px;
+  	background-color:rgba(40,40,40,0.95);
+  	color: white;
+}
+
+.obt_ga_popup_intrusive p{
+	margin-bottom: 20px;
+}
